@@ -36,7 +36,7 @@ float cost(float w) {
 }
 
 int main() {
-    srand(time(0))
+    srand(time(0));
     float w = randFloat() * 10.0f; /* weight */
     float h = 1e-3; /* number close to 0, but not 0 because def of deriv is limit of f as h->0 */
     float rate = 1e-2; /* learning rate, usually hand picked */
