@@ -36,12 +36,8 @@ float cost(float w) {
 }
 
 int main() {
-    /* y = w*x */
-
-    /* srand(time(0)) */
-    srand(69);
-    //float w = randFloat() * 10.0f; /* weight */
-    float w = 1000.0;
+    srand(time(0))
+    float w = randFloat() * 10.0f; /* weight */
     float h = 1e-3;
     float rate = 1e-2;
 

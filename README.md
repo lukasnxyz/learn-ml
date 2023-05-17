@@ -1,8 +1,10 @@
 ### Machine-Learning-Practice
 
 #### Notes
-- y = w(x)
+- y = w(x) OR y = w(x) - b
+- goal -> w(x) - b = 0
 - square result from cost function to get more amplified result
+- input is usually a feature vector
 
 #### Steps
 1. Any value for w
