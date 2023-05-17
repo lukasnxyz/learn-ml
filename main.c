@@ -38,12 +38,12 @@ float cost(float w) {
 int main() {
     srand(time(0))
     float w = randFloat() * 10.0f; /* weight */
-    float h = 1e-3;
-    float rate = 1e-2;
+    float h = 1e-3; /* number close to 0, but not 0 because def of deriv is limit of f as h->0 */
+    float rate = 1e-2; /* learning rate, usually hand picked */
 
     for(size_t i = 0; i < 500; i++) {
-        float dcost = (cost(w + h) - cost(w))/h;
-        w -= rate*dcost;
+        float dcost = (cost(w + h) - cost(w))/h; /* approximate derivative */
+        w -= rate*dcost; /* apply new cost to w value to get correct w value */
         printf("cost: %f, w: %f\n", cost(w), w);
     }
 
