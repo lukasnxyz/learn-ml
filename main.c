@@ -47,5 +47,11 @@ int main() {
         printf("cost: %f, w: %f\n", cost(w), w);
     }
 
+    printf("-------------------------\n");
+
+    for(size_t i = 0; i < tSet_size; i++) {
+        printf("actual: %f, expected: %f\n", w*tSet[i][0], tSet[i][1]);
+    }
+
     return 0;
 }
