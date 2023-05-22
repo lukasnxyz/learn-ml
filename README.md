@@ -12,3 +12,6 @@
 3. w - derivative of cost function (limit as h->0)
 4. Apply learning rate
 5. Iterate many times
+
+#### Log
+[Pt. 1](https://lukasn.xyz/posts/machine-learning-pt.1/)
