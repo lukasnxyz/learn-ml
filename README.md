@@ -5,6 +5,7 @@
 - goal -> w(x) - b = 0
 - square result from cost function to get more amplified result
 - input is usually a feature vector
+- gnuplot -> plot "cost.txt" with lines = graph out cost curve
 
 #### Steps
 1. Any value for w

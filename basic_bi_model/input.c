@@ -33,10 +33,11 @@ int main() {
     float rate = 1e-8;
     float h = 1e-5;
 
-    for(int i = 0; i < 10000000; i++) {
+    for(int i = 0; i < 10000; i++) {
         float c = cost(w1, w2, input);
 
-        printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
+        //printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
+        printf("%f\n", c);
 
         float dw1 = (cost(w1 + h, w2, input) - c)/h;
         float dw2 = (cost(w1, w2 + h, input) - c)/h;
