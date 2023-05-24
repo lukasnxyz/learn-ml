@@ -22,6 +22,15 @@ float randFloat() {
     return (float) rand()/ (float) RAND_MAX;
 }
 
+char *estimate(float w1, float w2, float x1, float x2) {
+    float y = w1*x1 + w2*x2;
+    if(y < 0.5) {
+        return "Female";
+    }
+
+    return "Male";
+}
+
 int main() {
     FILE *fp = fopen("input.txt", "r");
     Matrix *input = matInitFromFile(fp);
@@ -33,11 +42,11 @@ int main() {
     float rate = 1e-8;
     float h = 1e-5;
 
-    for(int i = 0; i < 10000; i++) {
+    for(int i = 0; i < 10000*100; i++) {
         float c = cost(w1, w2, input);
 
         //printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
-        printf("%f\n", c);
+        //printf("%f\n", c);
 
         float dw1 = (cost(w1 + h, w2, input) - c)/h;
         float dw2 = (cost(w1, w2 + h, input) - c)/h;
@@ -45,6 +54,10 @@ int main() {
         w1 -= rate*dw1;
         w2 -= rate*dw2;
     }
+
+    float height = 162.56;
+    float weight = 130;
+    printf("Height: %.2lfFt, Weight: %.2lflbs, Gender: %s\n", height/30.48, weight, estimate(w1, w2, height, weight));
 
     return 0;
 }
