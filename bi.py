@@ -1,4 +1,4 @@
-import random
+from random import randrange
 
 tSet = ([[0, 0], [1, 2], [2, 4], [3, 6], [4, 8]])
 
@@ -14,7 +14,7 @@ def cost(w):
     return result
 
 def main():
-    w = 4.29
+    w = randrange(10)
     h = 1e-3
     rate = 1e-2
 
