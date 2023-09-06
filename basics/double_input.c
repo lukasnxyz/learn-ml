@@ -38,8 +38,7 @@ int main() {
 
     for(int i = 0; i < 10000; i++) {
         float c = cost(w1, w2);
-        //printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
-        printf("%f\n", c);
+        printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
         float dw1 = (cost(w1 + h, w2) - c)/h;
         float dw2 = (cost(w1, w2 + h) - c)/h;
 

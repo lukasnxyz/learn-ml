@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "la.h"
+#include "../libml/la.h"
 
-/* height(m), weight(lbs) */ /* male or female, 1 || 0 */
+/* height(cm), weight(kg) */ /* male or female, 1 || 0 */
 
 float cost(float w1, float w2, Matrix *matIn) {
     float result = 0.0f;
@@ -33,25 +33,25 @@ char *estimate(float w1, float w2, float x1, float x2) {
 
 int main() {
     FILE *fp = fopen("500_Person_Gender_Height_Weight_Index.csv", "r");
-    Matrix *input = matInitFromFile(fp);
+    /*FILE *fp = fopen("weight-height.csv", "r");*/
+    Matrix *input = matInitFromFile(fp); /* rows, columns, height(cm), weight(kg), male/female 1/0 */
 
     srand(time(0));
-    float w1 = randFloat() * 5;
-    float w2 = randFloat() * 5;
+	float w1 = randFloat() * 5;
+	float w2 = randFloat() * 5;
 
-    float rate = 1e-7;
+    float rate = 1e-7; /* learning rate */
     float h = 1e-4;
 
     for(int i = 0; i < 10000*10; i++) {
         float c = cost(w1, w2, input);
 
-        printf("w1 :%f, w2: %f, c: %f\n", w1, w2, c);
-        //printf("%f\n", c);
+        printf("w1 :%f, w2: %f, c: %.15f\n", w1, w2, c);
 
-        float dw1 = (cost(w1 + h, w2, input) - c)/h;
+        float dw1 = (cost(w1 + h, w2, input) - c)/h; /* derivative */
         float dw2 = (cost(w1, w2 + h, input) - c)/h;
 
-        w1 -= rate*dw1;
+        w1 -= rate*dw1; /* distances */
         w2 -= rate*dw2;
     }
 

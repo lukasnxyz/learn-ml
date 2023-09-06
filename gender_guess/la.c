@@ -6,7 +6,7 @@ Matrix *matInit(unsigned int rows, unsigned int columns) {
     newMat->columns = columns;
     newMat->data = malloc(rows * sizeof(double*));
 
-    for(int i = 0; i < rows; i++) {
+    for(unsigned int i = 0; i < rows; i++) {
         newMat->data[i] = malloc(columns * sizeof(double));
     }
 
@@ -23,8 +23,8 @@ Matrix *matInitFromFile(FILE *fp) {
 	columns = atoi(entry);
 
 	Matrix *newMat = matInit(rows, columns);
-	for (int y = 0; y < newMat->rows; y++) {
-		for (int x = 0; x < newMat->columns; x++) {
+	for (unsigned int y = 0; y < newMat->rows; y++) {
+		for (unsigned int x = 0; x < newMat->columns; x++) {
 			fgets(entry, MAX, fp);
 			newMat->data[y][x] = strtod(entry, NULL);
             //printf("%lf\n", newMat->data[y][x]);
@@ -36,7 +36,7 @@ Matrix *matInitFromFile(FILE *fp) {
 }
 
 void matDInit(Matrix *m1) {
-    for(int i = 0; i < m1->rows; i++) {
+    for(unsigned int i = 0; i < m1->rows; i++) {
         free(m1->data[i]);
     }
     free(m1->data);
@@ -52,8 +52,8 @@ int matCompareDimensions(Matrix *m1, Matrix *m2) {
 }
 
 void matPrint(Matrix *m1) {
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m1->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m1->columns; x++) {
             printf("%lf ", m1->data[y][x]);
         }
         putchar('\n');
@@ -62,8 +62,8 @@ void matPrint(Matrix *m1) {
 
 Matrix *matTranspose(Matrix *m1) {
     Matrix *newMatrix = matInit(m1->columns, m1->rows);
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m1->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m1->columns; x++) {
             newMatrix->data[x][y] = m1->data[y][x];
         }
     }
@@ -73,8 +73,8 @@ Matrix *matTranspose(Matrix *m1) {
 
 Matrix *matDotScalar(Matrix *m1, double scalar) {
     Matrix *newMat = m1;
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m1->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m1->columns; x++) {
             newMat->data[y][x] *= scalar;
         }
     }
@@ -90,10 +90,10 @@ Matrix *matDotMat(Matrix *m1, Matrix *m2) {
 
     Matrix *newMatrix = matInit(m1->rows, m2->columns);
 
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m2->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m2->columns; x++) {
             double sum = 0;
-            for(int z = 0; z < m2->rows; z++) {
+            for(unsigned int z = 0; z < m2->rows; z++) {
                 sum += m1->data[y][z] * m2->data[z][x];
             }
             newMatrix->data[y][x] = sum;
@@ -105,8 +105,8 @@ Matrix *matDotMat(Matrix *m1, Matrix *m2) {
 
 Matrix *matAddScalar(Matrix *m1, double scalar) {
     Matrix *newMat = m1;
-    for(int y = 0; y < newMat->rows; y++) {
-        for(int x = 0; x < newMat->columns; x++) {
+    for(unsigned int y = 0; y < newMat->rows; y++) {
+        for(unsigned int x = 0; x < newMat->columns; x++) {
             newMat->data[y][x] += scalar;
         }
     }
@@ -117,8 +117,8 @@ Matrix *matAddScalar(Matrix *m1, double scalar) {
 Matrix *matAddMat(Matrix *m1, Matrix *m2) {
     matCompareDimensions(m1, m2);
     Matrix *newMat = matInit(m1->rows, m1->columns);
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m1->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m1->columns; x++) {
             newMat->data[y][x] = m1->data[y][x] + m2->data[y][x];
         }
     }
@@ -128,8 +128,8 @@ Matrix *matAddMat(Matrix *m1, Matrix *m2) {
 
 Matrix *matSubtractScalar(Matrix *m1, double scalar) {
     Matrix *newMat = m1;
-    for(int y = 0; y < newMat->rows; y++) {
-        for(int x = 0; x < newMat->columns; x++) {
+    for(unsigned int y = 0; y < newMat->rows; y++) {
+        for(unsigned int x = 0; x < newMat->columns; x++) {
             newMat->data[y][x] -= scalar;
         }
     }
@@ -140,8 +140,8 @@ Matrix *matSubtractScalar(Matrix *m1, double scalar) {
 Matrix *matSubtractMat(Matrix *m1, Matrix *m2) {
     matCompareDimensions(m1, m2);
     Matrix *newMat = matInit(m1->rows, m1->columns);
-    for(int y = 0; y < m1->rows; y++) {
-        for(int x = 0; x < m1->columns; x++) {
+    for(unsigned int y = 0; y < m1->rows; y++) {
+        for(unsigned int x = 0; x < m1->columns; x++) {
             newMat->data[y][x] = m1->data[y][x] - m2->data[y][x];
         }
     }
