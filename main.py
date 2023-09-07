@@ -37,44 +37,35 @@ class Xor():
         return c/n
 
 def finite_dif(model, g, eps, ti, to):
-    saved_w1 = model.w1.copy()
-    saved_b1 = model.b1.copy()
-    saved_w2 = model.w2.copy()
-    saved_b2 = model.b2.copy()
-
     c = model.cost(ti, to)
 
     for i in range(model.w1.shape[0]):
         for j in range(model.w1.shape[1]):
             saved = model.w1[i, j]
-            model.w1[i, j] = saved + eps
-            df_dw1 = (model.cost(ti, to) - c)/eps
+            model.w1[i, j] += eps
+            g.w1[i, j] = (model.cost(ti, to) - c)/eps
             model.w1[i, j] = saved;
-            g.w1[i, j] = df_dw1
 
     for i in range(model.b1.shape[0]):
         for j in range(model.b1.shape[1]):
-            saved = model.b1[i, j]
-            model.b1[i, j] = saved + eps
-            df_db1 = (model.cost(ti, to) - c)/eps
-            model.b1[i, j] = saved;
-            g.b1[i, j] = df_db1
+            saved = model.w1[i, j]
+            model.w1[i, j] += eps
+            g.w1[i, j] = (model.cost(ti, to) - c)/eps
+            model.w1[i, j] = saved;
 
     for i in range(model.w2.shape[0]):
         for j in range(model.w2.shape[1]):
-            saved = model.w2[i, j]
-            model.w2[i, j] = saved + eps
-            df_dw2 = (model.cost(ti, to) - c)/eps
-            model.w2[i, j] = saved;
-            g.w2[i, j] = df_dw2
+            saved = model.w1[i, j]
+            model.w1[i, j] += eps
+            g.w1[i, j] = (model.cost(ti, to) - c)/eps
+            model.w1[i, j] = saved;
 
     for i in range(model.b2.shape[0]):
         for j in range(model.b2.shape[1]):
-            saved = model.b2[i, j]
-            model.b2[i, j] = saved + eps
-            df_db2 = (model.cost(ti, to) - c)/eps
-            model.b2[i, j] = saved;
-            g.b2[i, j] = df_db2
+            saved = model.w1[i, j]
+            model.w1[i, j] += eps
+            g.w1[i, j] = (model.cost(ti, to) - c)/eps
+            model.w1[i, j] = saved;
 
 def learn(model, g, rate):
     for i in range(model.w1.shape[0]):
@@ -100,10 +91,10 @@ def main():
     random.seed(datetime.now().timestamp())
 
     td = np.array([
-        [2, 2, 4],
-        [3, 2, 6],
-        [4, 2, 8],
-        [5, 2, 10]
+        [0, 0, 0],
+        [0, 1, 1],
+        [0, 1, 1],
+        [1, 1, 0]
         ])
 
     ti = td[:, :2]
@@ -130,22 +121,27 @@ def main():
         np.array([1, 1]), # a2
         )
 
-    eps = 1e-1
-    rate = 1e-1
+    eps = 1e-5
+    rate = 1e-10
 
-    for i in range(10000):
+    print("cost: ", model.cost(ti, to))
+    for i in range(100):
         model.forward()
         finite_dif(model, g, eps, ti, to)
         learn(model, g, rate)
         print(i, "cost: ", model.cost(ti, to))
+
+    a = np.array([
+            [model.a1[0, 0]],
+            [model.a2[0, 0]],
+             ])
 
     for i in range(2):
         for j in range(2):
             model.a0[0] = i
             model.a0[1] = j
             model.forward()
-
-            print(i, "^", j, model.a2)
+            print(i, "^", j, a[j])
 
 if __name__ == "__main__":
     main()
