@@ -1,7 +1,13 @@
 #include "la.h"
 
-float rand_float(void) {
+float rand_float(void)
+{
 	return (float) rand()/ (float) RAND_MAX;
+}
+
+float sigmoidf(float x)
+{
+	return 1.f / (1.f + expf(-x));
 }
 
 struct Mat mat_init(size_t rows, size_t cols)
@@ -45,7 +51,16 @@ void mat_fill(struct Mat m, float x)
 	}
 }
 
-void mat_dot_mat(struct Mat dest, struct Mat m1, struct Mat m2)
+void mat_sig(struct Mat m)
+{
+	for(size_t i = 0; i < m.rows; ++i) {
+		for(size_t j = 0; j < m.cols; ++j) {
+			MAT_AT(m, i, j) = sigmoidf(MAT_AT(m, i, j));
+		}
+	}
+}
+
+void mat_dot(struct Mat dest, struct Mat m1, struct Mat m2)
 {
 	assert(m1.cols == m2.rows);
 	assert((dest.rows == m1.rows) && (dest.cols == m2.cols));
@@ -63,7 +78,7 @@ void mat_dot_mat(struct Mat dest, struct Mat m1, struct Mat m2)
 	}
 }
 
-void mat_add_mat(struct Mat dest, struct Mat m)
+void mat_sum(struct Mat dest, struct Mat m)
 {
 	for(size_t i = 0; i < dest.rows; ++i) {
 		for(size_t j = 0; j < dest.cols; ++j) {
