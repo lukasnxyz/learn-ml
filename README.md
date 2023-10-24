@@ -1,9 +1,14 @@
 ### Machine-Learning-Practice
-This is a repo for my practice in machine learning. I plan on making a machine learning library in C
-called `libml` and make it an evergrowing project and write papers about it, but that is still far
-from even barely working. For now, this is just basic ml implemented with linear algebra.
+This is a repo for my practice in machine learning. For now, this is just basic ml
+implemented with numpy linear algebra.
 
-#### Quick Start
+#### Ideas/Todo
+- Understand linear algebra and calculus applications in machine learning
+- Gender guessing based on height and weight in Python
+- Python neural network class to use for other things
+- Machine learning library in C
+
+#### Step by step what to learn
 
 #### Notes
 - https://machinelearningmastery.com/start-here/#getstarted
@@ -18,3 +23,9 @@ from even barely working. For now, this is just basic ml implemented with linear
 	3. w - derivative of cost function (limit as h->0)
 	4. Apply learning rate
 	5. Iterate many times
+- Steps
+	1. Import data into matricies
+	2. Randomize numbers in bias and weight matricies
+	3. Run finite_diff and learn a number of times
+- tqdm (progress bar)
+- Gradient descent is basic machine learning algo

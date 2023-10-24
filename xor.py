@@ -16,7 +16,7 @@ class Xor():
     def __str__(self):
         return f"a0 = {self.a0}\nw1 = {self.w1}\nb1 = {self.b1}\na1 = {self.a1}\nw2 = {self.w2}\nb2 = {self.b2}\na2 = {self.a2}"
 
-    def forward(self):
+    def forward(self): # go through each neuron in neural network (1 at a time) when called
         self.a1 = self.a0 * self.w1
         self.a1 += self.b1
         self.a2 = sigmoid(self.a2)
@@ -84,7 +84,7 @@ def learn(model, g, rate):
         for j in range(model.b2.shape[1]):
             model.b2[i, j] -= rate*g.b2[i, j]
 
-def sigmoid(z):
+def sigmoid(z): # make number between -1.0 and 1.0
     return 1 / (1 + np.exp(-z))
 
 def main():
