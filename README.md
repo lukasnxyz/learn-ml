@@ -7,6 +7,7 @@ implemented with numpy linear algebra.
 - Gender guessing based on height and weight in Python
 - Python neural network class to use for other things
 - Machine learning library in C
+- Raspberry PI ml video object or person detection (first with something like opencv then myself)?
 
 #### Step by step what to learn
 

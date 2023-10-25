@@ -122,10 +122,10 @@ def main():
         )
 
     eps = 1e-5
-    rate = 1e-10
+    rate = 1e-2
 
     print("cost: ", model.cost(ti, to))
-    for i in range(100):
+    for i in range(10000):
         model.forward()
         finite_dif(model, g, eps, ti, to)
         learn(model, g, rate)
@@ -136,6 +136,7 @@ def main():
             [model.a2[0, 0]],
              ])
 
+    # print model
     for i in range(2):
         for j in range(2):
             model.a0[0] = i
