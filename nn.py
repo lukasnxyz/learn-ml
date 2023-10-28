@@ -30,19 +30,6 @@ class Tensor:
 
         return self.activated_output
 
-        def backward(self, target, learning_rate):
-            # Compute gradients and update weights and biases using backpropagation
-            output_error = target - self.activated_output
-            delta_output = output_error * self.sigmoid_derivative(self.activated_output)
-
-            hidden_error = delta_output.dot(self.weights_hidden_output.T)
-            delta_hidden = hidden_error * self.sigmoid_derivative(self.hidden_output)
-
-            self.weights_hidden_output += self.hidden_output.T.dot(delta_output) * learning_rate
-            self.bias_output += np.sum(delta_output) * learning_rate
-            self.weights_input_hidden += self.inputs.T.dot(delta_hidden) * learning_rate
-            self.bias_hidden += np.sum(delta_hidden) * learning_rate
-
     def backward(self, target, learning_rate):
         # Compute gradients and update weights and biases using backpropagation
         output_error = target - self.activated_output
@@ -53,10 +40,17 @@ class Tensor:
 
         self.hidden_output = np.array(self.hidden_output)
         np.transpose(self.hidden_output)
-        print(self.hidden_output)
 
-        self.weights_hidden_output += self.hidden_output.T.dot(delta_output) * learning_rate
+        delta_output = float(delta_output)
+
+        print("weight_input_hidden size: " + str(self.weights_input_hidden.shape))
+
+        print("delta_hidden shape: " + str(delta_hidden.shape))
+        print("inputs shape: " + str(self.inputs.shape))
+
+        self.weights_hidden_output += (self.hidden_output.dot(delta_output) * learning_rate).reshape((4,1))
         self.bias_output += np.sum(delta_output) * learning_rate
+
         self.weights_input_hidden += self.inputs.T.dot(delta_hidden) * learning_rate
         self.bias_hidden += np.sum(delta_hidden) * learning_rate
 
@@ -80,7 +74,7 @@ class Tensor:
 def main():
     # import data as numpy array
     data = []
-    with open('data/500_Person_Gender_Height_Weight_Index.csv', 'r') as f:
+    with open('data/500_Person_Gender_Height_Weight_Index.csv', 'r') as f: # 1 Male, 0 Female
         reader = csv.reader(f)
         for row in reader:
             data.append(row)
@@ -89,24 +83,20 @@ def main():
 
     # example usage
     input_size = 2  # Height and weight
-    hidden_size = 3  # Number of hidden units
-    output_size = 1  # Gender (0 or 1)
+    hidden_size = 4  # Number of hidden units
+    output_size = 1  # Gender (0 or 1)(female, male)
 
     input_data = np.array([(x[0], x[1]) for x in data]).astype(float)
     target_data = np.array([np.array([x[2]]) for x in data]).astype(float)
 
-    print(input_data)
-    print("---------")
-    print(target_data)
-
     pred = Tensor(input_size, hidden_size, output_size)
 
-    epochs = 1000
-    rate = 0.01
+    epochs = 800
+    rate = 1e-3
 
     pred.train(input_data, target_data, epochs, rate)
 
-    test_data = np.array([[174, 961], [189, 87]]) # 1, 1
+    test_data = np.array([[185, 96], [149, 61]]) # 1(male), 0(female)
     predictions = pred.forward(test_data)
     print("Predictions:")
     print(predictions)
