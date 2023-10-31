@@ -20,7 +20,7 @@ class Tensor:
     def sigmoid_derivative(self, x):
         return x * (1 - x)
 
-    # forward propagation
+    # propagation
     def forward(self, inputs):
         self.inputs = inputs # Height and weight
         self.hidden_input = np.dot(inputs, self.weights_input_hidden) + self.bias_hidden
@@ -30,6 +30,7 @@ class Tensor:
 
         return self.activated_output
 
+    # propagation
     def backward(self, target, learning_rate):
         # Compute gradients and update weights and biases using backpropagation
         output_error = target - self.activated_output

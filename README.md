@@ -2,14 +2,20 @@
 This is a repo for my practice in machine learning. For now, this is just basic ml
 implemented with numpy linear algebra.
 
-#### Ideas/Todo
+#### Ideas
 - Understand linear algebra and calculus applications in machine learning
 - Gender guessing based on height and weight in Python
 - Python neural network class to use for other things
 - Machine learning library in C
 - Raspberry PI ml video object or person detection (first with something like opencv then myself)?
+- Turning Handwritten Documents into Digitized Versions
+- Stock Market Predicition
 
-#### Step by step what to learn
+#### Todo
+1. Fix back propagation
+2. Figure out why prediction is always 1
+3. Learn about different types of machine learning algorithms and which one I have implemented
+4. See how I can implement many of them in one library
 
 #### Notes
 - https://machinelearningmastery.com/start-here/#getstarted
