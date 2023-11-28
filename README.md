@@ -1,4 +1,4 @@
-### ml
+### Ml
 This is a repo for my practice in machine learning. For now this is just testing things, but it will
 soon turn into a much bigger project.
 
