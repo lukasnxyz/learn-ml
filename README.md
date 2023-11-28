@@ -11,6 +11,11 @@ implemented with numpy linear algebra.
 - Turning Handwritten Documents into Digitized Versions
 - Stock Market Predicition
 
+### Download Data
+- Bitcoin Historical Data: https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data/
+
+### [Notes](notes.md)
+
 #### Todo
 1. Fix back propagation
 2. Figure out why prediction is always 1
