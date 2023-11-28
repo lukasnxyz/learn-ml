@@ -44,12 +44,12 @@ class Tensor:
 
         delta_output = float(delta_output)
 
-        print("weight_input_hidden size: " + str(self.weights_input_hidden.shape))
+        #print("weight_input_hidden size: " + str(self.weights_input_hidden.shape))
 
-        print("delta_hidden shape: " + str(delta_hidden.shape))
-        print("inputs shape: " + str(self.inputs.shape))
+        #print("delta_hidden shape: " + str(delta_hidden.shape))
+        #print("inputs shape: " + str(self.inputs.shape))
 
-        self.weights_hidden_output += (self.hidden_output.dot(delta_output) * learning_rate).reshape((4,1))
+        self.weights_hidden_output += (self.hidden_output.dot(delta_output) * learning_rate).reshape((2,1))
         self.bias_output += np.sum(delta_output) * learning_rate
 
         self.weights_input_hidden += self.inputs.T.dot(delta_hidden) * learning_rate
@@ -73,7 +73,7 @@ class Tensor:
 
 # Move main to main.py once library is working
 def main():
-    # import data as numpy array
+    '''
     data = []
     with open('data/500_Person_Gender_Height_Weight_Index.csv', 'r') as f: # 1 Male, 0 Female
         reader = csv.reader(f)
@@ -81,10 +81,18 @@ def main():
             data.append(row)
 
     data = np.array(data)
+    '''
 
-    # example usage
+    # XOR is only true if the input differ
+    data = [
+            [0, 0, 0],
+            [1, 0, 1],
+            [0, 1, 1],
+            [1, 1, 0]
+    ]
+
     input_size = 2  # Height and weight
-    hidden_size = 4  # Number of hidden units
+    hidden_size = 2  # Number of hidden units
     output_size = 1  # Gender (0 or 1)(female, male)
 
     input_data = np.array([(x[0], x[1]) for x in data]).astype(float)
@@ -92,13 +100,16 @@ def main():
 
     pred = Tensor(input_size, hidden_size, output_size)
 
-    epochs = 800
+    epochs = 1000
     rate = 1e-3
 
     pred.train(input_data, target_data, epochs, rate)
 
-    test_data = np.array([[185, 96], [149, 61]]) # 1(male), 0(female)
+    #test_data = np.array([[185, 96], [149, 61]]) # 1(male), 0(female)
+    test_data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
+
     predictions = pred.forward(test_data)
+
     print("Predictions:")
     print(predictions)
 
