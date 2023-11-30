@@ -1,4 +1,6 @@
 ### Things I am going through
+- https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab
+
 - https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
 - https://www.youtube.com/watch?v=w8yWXqWQYmU
 - https://avi.alkalay.net/2018/07/fedora-jupyter-notebook.html
