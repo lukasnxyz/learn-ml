@@ -9,6 +9,9 @@
 - https://www.kaggle.com/datasets/hojjatk/mnist-dataset
 - https://www.kaggle.com/code/hojjatk/read-mnist-dataset/notebook
 
+#### Download Data
+- Bitcoin Historical Data: https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data/
+
 ### Notes
 - Gradient descent is basic machine learning algo
 - y = w(x) OR y = w(x) - b
