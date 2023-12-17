@@ -11,7 +11,7 @@ computer. I also want to do this in C because it's far more fun than in Python.
 For neural network
 ```bash
 $ make
-$ ./bin/main
+$ ./bin/nn
 ```
 To run tests
 ```bash
@@ -20,7 +20,6 @@ $ make test
 
 ### Todo
 - [ ] Implement .clang-format
-- [ ] Build minimal test system
 - [ ] Build progress bar
 - [ ] Build CSV parser
 

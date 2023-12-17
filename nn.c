@@ -1,6 +1,8 @@
-#include "nn.h"
+#include <stdio.h>
 
-void hello(void)
+#include "src/la.h"
+
+int main(void)
 {
   printf("Hello World!\n");
 

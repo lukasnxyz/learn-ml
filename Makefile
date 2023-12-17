@@ -12,9 +12,9 @@ OBJ_FILES=$(patsubst $(SRC)/%.c,$(OBJ)/%.o,$(SRC_FILES))
 TEST_SRC_FILES=$(wildcard $(TEST)/*.c)
 TEST_BIN_FILES=$(patsubst $(TEST)/%.c,$(TEST)/$(BIN)/%,$(TEST_SRC_FILES))
 
-all: $(BIN)/main
+all: $(BIN)/nn
 
-$(BIN)/main: $(OBJ_FILES) main.c
+$(BIN)/nn: $(OBJ_FILES) nn.c
 	@mkdir -p $(BIN)
 	$(CC) $(CFLAGS) $^ -o $@
 

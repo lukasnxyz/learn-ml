@@ -25,13 +25,12 @@ static double total_time = 0;
   t = clock() - t;\
   double time = ((double)t)/CLOCKS_PER_SEC;\
   total_time += time;\
-  \
-  printf("%d. [%s] ", total_tests, name);\
+  printf("%d. [%s]: ", total_tests, name);\
   if(failed) {\
     ++failed_tests;\
     printf("FAILED\n");\
   } else {\
-    printf("PASSED\n");\
+    printf("\e[1;32mPASSED\e[0m\n");\
   }\
 } while(0)
 
