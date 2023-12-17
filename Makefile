@@ -1,26 +1,43 @@
-# ml
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Werror -I./src
 
-CC=gcc
-CFLAGS=-Wall -Wextra -g
-SRC=src
-OBJ=obj
-BIN=bin
+# Directories
+SRC_DIR = src
+OBJ_DIR = obj
+BIN_DIR = bin
+TEST_DIR = tests
+BIN_TESTS = tests/bin
 
-SRCS=$(wildcard $(SRC)/*.c)
-OBJS=$(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
-BINS=$(BIN)/nn
+# Source files
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
+TEST_SRC_FILES = $(wildcard $(TEST_DIR)/*.c)
+TEST_BIN_FILES = $(patsubst $(TEST_DIR)/%.c,$(TEST_DIR)/$(BIN_DIR)/%,$(TEST_SRC_FILES))
 
-all: $(BINS)
+# Targets
+all: $(BIN_DIR)/main
 
-$(BINS): $(OBJS)
-	@mkdir -p $(BIN)
-	$(CC) $(CFLAGS) $(OBJS) -o $@
+$(BIN_DIR)/main: $(OBJ_FILES) main.c
+	@mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) $^ -o $@
 
-$(OBJ)/%.o: $(SRC)/%.c
-	@mkdir -p $(OBJ)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
-	rm -rf $(BIN)/ $(OBJ)/
+test: $(TEST_BIN_FILES)
+	@echo "Running tests..."
+	@for test in $^ ; do \
+		$$test ; \
+	done
 
-.PHONY: all clean
+$(TEST_DIR)/$(BIN_DIR)/%: $(TEST_DIR)/%.c $(OBJ_FILES)
+	@mkdir -p $(BIN_TESTS)
+	$(CC) $(CFLAGS) $^ -o $@
+
+# Clean
+clean:
+	rm -rf $(BIN_DIR) $(OBJ_DIR) $(BIN_TESTS)
+
+.PHONY: all test clean

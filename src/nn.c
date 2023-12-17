@@ -1,8 +1,6 @@
-#include <stdio.h>
+#include "nn.h"
 
-#include "la.h"
-
-int main(void)
+void hello(void)
 {
   printf("Hello World!\n");
 
@@ -17,6 +15,4 @@ int main(void)
 
   mat_free(&m1);
   mat_free(&m2);
-
-  return 0;
 }

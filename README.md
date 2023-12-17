@@ -2,9 +2,10 @@
 For now this is just me learning about neural networks and machine learning, but I hope to soon turn this into a large
 community project.
 
-This is a library is meant for building and training neural networks in C. All implemented code has been written from
+This library is meant for building and training neural networks in C. All implemented code has been written from
 scratch and uses only [C standard libraries](https://en.cppreference.com/w/c/header) so as to keep this project as clean and minimal as possible. This neural
-network library is meant to be portable and light weight to make machine learning more accessible to everyone.
+network library is meant to be portable and light weight to make machine learning more accessible to everyone on any
+computer. I also want to do this in C because it's far more fun than in Python.
 
 ### Quick start
 For neural network (plan on turning it into a library)
@@ -14,10 +15,10 @@ $ ./bin/nn
 ```
 
 ### Todo
-- Implement .clang-format
-- Build minimal test system
-- Build progress bar
-- Build CSV parser
+- [ ] Implement .clang-format
+- [ ] Build minimal test system
+- [ ] Build progress bar
+- [ ] Build CSV parser
 
 <details>
   <summary>Some other notes</summary>

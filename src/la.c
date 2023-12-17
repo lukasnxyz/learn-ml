@@ -40,6 +40,9 @@ Matrix *mat_init_from_file(FILE *fp)
 	cols = atoi(entry);
 
   Matrix *new_mat = mat_init(rows, cols);
+  if(new_mat == NULL) {
+    return NULL;
+  }
 
   for (size_t y = 0; y < new_mat->rows; ++y) {
     for (size_t x = 0; x < new_mat->cols; ++x) {
