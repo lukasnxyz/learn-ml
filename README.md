@@ -35,6 +35,7 @@ $ make test
   - https://www.kaggle.com/datasets/hojjatk/mnist-dataset
   - https://www.kaggle.com/code/hojjatk/read-mnist-dataset/notebook
   - Bitcoin Historical Data: https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data/
+  - https://en.wikipedia.org/wiki/Convolutional_neural_network
 
   - Gradient descent is basic machine learning algo
   - y = w(x) OR y = w(x) - b

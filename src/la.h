@@ -12,17 +12,17 @@ typedef struct {
     double **data;
 } Matrix;
 
-extern Matrix *mat_init(const size_t, const size_t);
-extern Matrix *mat_init_from_file(FILE *);
-extern void mat_fill(Matrix **, const double);
-extern void mat_free(Matrix **);
-extern void mat_print(Matrix **);
-extern int mat_dim_compare(Matrix **, Matrix **);
-extern Matrix *mat_transpose(Matrix **);
+Matrix *mat_init(const size_t, const size_t);
+Matrix *mat_init_from_file(FILE *);
+void mat_fill(Matrix **, const double);
+void mat_free(Matrix **);
+void mat_print(Matrix **);
+int mat_dim_compare(Matrix **, Matrix **);
+Matrix *mat_transpose(Matrix **);
 
-extern Matrix *mat_dot_mat(Matrix **, Matrix **);
-extern void mat_dot_scalar(Matrix **, const double);
-extern void mat_add_scalar(Matrix **, const double);
-extern void mat_add_mat(Matrix **, Matrix **);
+Matrix *mat_dot_mat(Matrix **, Matrix **);
+void mat_dot_scalar(Matrix **, const double);
+void mat_add_scalar(Matrix **, const double);
+void mat_add_mat(Matrix **, Matrix **);
 
 #endif /* LA_H */
