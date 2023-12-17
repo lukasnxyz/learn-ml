@@ -2,33 +2,25 @@
 
 CC=gcc
 CFLAGS=-Wall -Wextra -g
-OPTS=
+SRC=src
+OBJ=obj
+BIN=bin
 
-LA_SRC=la.c
-NN_SRC=nn.c
-TEST_SRC=la_test.c
+SRCS=$(wildcard $(SRC)/*.c)
+OBJS=$(patsubst $(SRC)/%.c, $(OBJ)/%.o, $(SRCS))
+BINS=$(BIN)/nn
 
-LA_OBJS=$(LA_SRC:.c=.o)
-NN_OBJS=$(NN_SRC:.c=.o)
-TEST_OBJS=$(TEST_SRC:.c=.o)
+all: $(BINS)
 
-SRCDIR=src/
-TESTDIR=test/
+$(BINS): $(OBJS)
+	@mkdir -p $(BIN)
+	$(CC) $(CFLAGS) $(OBJS) -o $@
 
-all: la test
-
-%.o: $(SRCDIR)%.c $(TESTDIR)%.c
-	$(CC) -c $(CFLAGS) $< -o $@ $(OPTS)
-
-la: $(LA_OBJS)
-	$(CC) -o $@ $^ $(OPTS)
-
-run: all
-	 @printf '[\e[0;36mTest\e[0m] Executing binary...\n'
-	 @./la
-
-test: $(TEST_OBJS)
-	$(CC) -c $(CFLAGS) $< -o $@ $(OPTS)
+$(OBJ)/%.o: $(SRC)/%.c
+	@mkdir -p $(OBJ)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f *.o la la_test
+	rm -rf $(BIN)/ $(OBJ)/
+
+.PHONY: all clean

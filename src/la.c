@@ -75,7 +75,7 @@ void mat_print(Matrix **m1)
 {
   for(size_t y = 0; y < (*m1)->rows; ++y) {
     for(size_t x = 0; x < (*m1)->cols; ++x) {
-      printf("%.4lf ", (*m1)->data[y][x]);
+      printf("%.3lf ", (*m1)->data[y][x]);
     }
 
     putchar('\n');

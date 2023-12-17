@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-#define NUM_OF_TESTS 11
+#include "../src/la.h"
 
 /*
+#define NUM_OF_TESTS 11
 int test_new_mat(const size_t, const size_t);
 int test_mat_init_from_file(FILE *);
 int test_mat_fill(Matrix **, const double);
@@ -20,7 +21,8 @@ int test(void);
 
 int main(void)
 {
-  printf("Number of tests run: %d\n", NUM_OF_TESTS);
+  //printf("Number of tests run: %d\n", NUM_OF_TESTS);
+  printf("Testing...\n");
 
   return test();
 }
