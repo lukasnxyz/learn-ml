@@ -1,29 +1,25 @@
-# Compiler and flags
-CC = gcc
-CFLAGS = -Wall -Werror -I./src
+CC=gcc
+CFLAGS=-Wall -Wextra
 
-# Directories
-SRC_DIR = src
-OBJ_DIR = obj
-BIN_DIR = bin
-TEST_DIR = tests
-BIN_TESTS = tests/bin
+SRC=src
+OBJ=obj
+BIN=bin
+TEST=tests
+TEST_BIN=tests/bin
 
-# Source files
-SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
-OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
-TEST_SRC_FILES = $(wildcard $(TEST_DIR)/*.c)
-TEST_BIN_FILES = $(patsubst $(TEST_DIR)/%.c,$(TEST_DIR)/$(BIN_DIR)/%,$(TEST_SRC_FILES))
+SRC_FILES=$(wildcard $(SRC)/*.c)
+OBJ_FILES=$(patsubst $(SRC)/%.c,$(OBJ)/%.o,$(SRC_FILES))
+TEST_SRC_FILES=$(wildcard $(TEST)/*.c)
+TEST_BIN_FILES=$(patsubst $(TEST)/%.c,$(TEST)/$(BIN)/%,$(TEST_SRC_FILES))
 
-# Targets
-all: $(BIN_DIR)/main
+all: $(BIN)/main
 
-$(BIN_DIR)/main: $(OBJ_FILES) main.c
-	@mkdir -p $(BIN_DIR)
+$(BIN)/main: $(OBJ_FILES) main.c
+	@mkdir -p $(BIN)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(OBJ_DIR)
+$(OBJ)/%.o: $(SRC)/%.c
+	@mkdir -p $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 test: $(TEST_BIN_FILES)
@@ -32,12 +28,11 @@ test: $(TEST_BIN_FILES)
 		$$test ; \
 	done
 
-$(TEST_DIR)/$(BIN_DIR)/%: $(TEST_DIR)/%.c $(OBJ_FILES)
-	@mkdir -p $(BIN_TESTS)
+$(TEST)/$(BIN)/%: $(TEST)/%.c $(OBJ_FILES)
+	@mkdir -p $(TEST_BIN)
 	$(CC) $(CFLAGS) $^ -o $@
 
-# Clean
 clean:
-	rm -rf $(BIN_DIR) $(OBJ_DIR) $(BIN_TESTS)
+	rm -rf $(BIN) $(OBJ) $(TEST_BIN)
 
 .PHONY: all test clean

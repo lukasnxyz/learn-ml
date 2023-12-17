@@ -8,10 +8,14 @@ network library is meant to be portable and light weight to make machine learnin
 computer. I also want to do this in C because it's far more fun than in Python.
 
 ### Quick start
-For neural network (plan on turning it into a library)
+For neural network
 ```bash
 $ make
-$ ./bin/nn
+$ ./bin/main
+```
+To run tests
+```bash
+$ make test
 ```
 
 ### Todo
