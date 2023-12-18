@@ -29,16 +29,17 @@ $ make test
   <summary>Some other notes</summary>
 
   #### Learning
-  - Neural networks tutorial playlist: https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3
-  - Convolutional neural network: https://en.wikipedia.org/wiki/Convolutional_neural_network
-  - Relu: https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
-  - Mnist classifier from scratch: https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab
-  - nn from scatch in python/numpy: https://www.youtube.com/watch?v=w8yWXqWQYmU
-  - What's mnist: https://en.wikipedia.org/wiki/MNIST_database
+  - [Neural networks tutorial playlist](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3)
+  - [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
+  - [Relu](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)
+  - [Mnist classifier from scratch](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
+  - [nn from scatch in python/numpy](https://www.youtube.com/watch?v=w8yWXqWQYmU)
+  - [What's mnist](https://en.wikipedia.org/wiki/MNIST_database)
+  - [Tinygrad first commit](https://github.com/tinygrad/tinygrad/tree/1bb258350092defd802cf6fbb94b1e8de96935cc)
 
   #### Data
-  - Mnist dataset: https://www.kaggle.com/datasets/hojjatk/mnist-dataset
-  - Bitcoin Historical Data: https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data/
+  - [Mnist dataset](https://www.kaggle.com/datasets/hojjatk/mnist-dataset)
+  - [Bitcoin Historical Data](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data/)
 
   #### Notes
   - Progress bar in python: tqdm

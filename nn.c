@@ -2,19 +2,29 @@
 
 #include "src/la.h"
 
+int sigmoid(const int);
+int sigmoid_deriv(const int);
+
 int main(void)
 {
-  printf("Hello World!\n");
+  Matrix *data = mat_init(4, 3);
 
-  Matrix *m1 = mat_init(4, 3);
-  Matrix *m2 = mat_init(4, 3);
+  data->data[0][0] = 0;
+  data->data[0][1] = 0;
+  data->data[0][2] = 0;
+  data->data[1][0] = 1;
+  data->data[1][1] = 0;
+  data->data[1][2] = 1;
+  data->data[2][0] = 0;
+  data->data[2][1] = 1;
+  data->data[2][2] = 1;
+  data->data[3][0] = 1;
+  data->data[3][1] = 1;
+  data->data[3][2] = 0;
 
-  mat_fill(&m1, 2);
-  mat_fill(&m2, 3);
-  mat_add_mat(&m1, &m2);
+  mat_print(&data);
 
-  mat_print(&m1);
+  mat_free(&data);
 
-  mat_free(&m1);
-  mat_free(&m2);
+  return 0;
 }
