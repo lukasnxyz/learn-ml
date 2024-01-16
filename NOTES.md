@@ -5,6 +5,7 @@
 - [NN from scatch in python/numpy](https://www.youtube.com/watch?v=w8yWXqWQYmU)
 - [Mnist classifier from scratch](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
 - [Learning ML roadmap](https://www.youtube.com/watch?v=gUmagAluXpk)
+- [Python refresher](https://learnxinyminutes.com/docs/python/)
 
 ### What is?
 - [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
