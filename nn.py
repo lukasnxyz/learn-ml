@@ -1,5 +1,6 @@
 import numpy as np
-import csv
+
+# --- This is all shit!
 
 # Basic neural network, consists of multidimensional arrays
 # For gender will 1x2 vectors
@@ -105,7 +106,7 @@ def main():
 
     pred.train(input_data, target_data, epochs, rate)
 
-    #test_data = np.array([[185, 96], [149, 61]]) # 1(male), 0(female)
+    # test_data = np.array([[185, 96], [149, 61]]) # 1(male), 0(female)
     test_data = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
 
     predictions = pred.forward(test_data)
