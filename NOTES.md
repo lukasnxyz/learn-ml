@@ -1,9 +1,11 @@
 ## Notes
 
 ### Tutorials
-- [NN tutorial playlist](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3)
+- [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 - [NN from scatch in python/numpy](https://www.youtube.com/watch?v=w8yWXqWQYmU)
-- [Mnist classifier from scratch](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
+- [MNIST classifier from scratch article](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
+- [MNIST classifier from scratch](https://github.com/kdexd/digit-classifier)
+- [Stanford CS229 ML course](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 - [Learning ML roadmap](https://www.youtube.com/watch?v=gUmagAluXpk)
 - [Python refresher](https://learnxinyminutes.com/docs/python/)
 
@@ -14,6 +16,7 @@
 
 ### Other
 - [Tinygrad first commit](https://github.com/tinygrad/tinygrad/tree/1bb258350092defd802cf6fbb94b1e8de96935cc)
+- ML dev stack: python, jupyter-notebook, numpy, pandas, matplotlib
 
 ### General notes
 - Progress bar in python: tqdm
@@ -31,12 +34,11 @@
 
 ### Ideas
 - Python neural network class to use for other things
-- Machine learning library in C
 - Crypto Predicition
 - Something like ChatGPT that sites it's sources will over take Google as a search engine
 
-### What are some applications of machine learning?
-- X-recognition
-- [SpaceX](https://www.thecommunityai.org/ai-blog/ai-on-spacex)
-- [x.ai](https://x.ai/)
-- Large Language Models (LLM)
+### Steps to learn first
+1. [DSA](https://frontendmasters.com/courses/algorithms/)
+2. [ML algorithms course](https://www.youtube.com/watch?v=k9V3DapHEDA)
+3. something with neural netoworks and deep learning
+4. RNNs, Transformers and GAN based models
