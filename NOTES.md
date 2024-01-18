@@ -6,7 +6,6 @@
 - [MNIST classifier from scratch article](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
 - [MNIST classifier from scratch](https://github.com/kdexd/digit-classifier)
 - [Stanford CS229 ML course](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
-- [Learning ML roadmap](https://www.youtube.com/watch?v=gUmagAluXpk)
 - [Python refresher](https://learnxinyminutes.com/docs/python/)
 
 ### What is?
@@ -39,6 +38,7 @@
 
 ### Steps to learn first
 1. [DSA](https://frontendmasters.com/courses/algorithms/)
-2. [ML algorithms course](https://www.youtube.com/watch?v=k9V3DapHEDA)
+2. Kaggle intro to ml and intermediate ml
+2.1 [ML algorithms course](https://www.youtube.com/watch?v=k9V3DapHEDA)
 3. something with neural netoworks and deep learning
-4. RNNs, Transformers and GAN based models
+5. RNNs, Transformers and GAN based models
