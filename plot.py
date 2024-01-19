@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 def square(x):
     return x * x
 
-def deriv(func, x):
+def deriv(func, x): # passing a function here
     h = 1e-9
     return (func(x + h) - func(x))/h
 
