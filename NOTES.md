@@ -36,9 +36,32 @@
 - Crypto Predicition
 - Something like ChatGPT that sites it's sources will over take Google as a search engine
 
-### Steps to learn first
+### Learning steps (bottom up)
+Types of ML
+- Supervised algorithms (regression, classification)
+- Unsupervised and semi-supervised algorithms (clustering, dimensionality reduction, graph-based algorithms)
+- Deep learning (CNNs and RNNs)
+- Reinforcement learning (dynamic programming, Monte Carlo methods, heuristic methods)
+
+Different tasks
+- Computer vision (e.g.: classification, object detection, semantic segmentation)
+- Natural language processing (e.g.: text classification, sentiment analysis, language modeling, machine translation)
+- Recommending systems
+- Classic machine learning
+
+### Learning
 1. [DSA](https://frontendmasters.com/courses/algorithms/)
 2. Kaggle intro to ml and intermediate ml
-2.1 [ML algorithms course](https://www.youtube.com/watch?v=k9V3DapHEDA)
-3. something with neural netoworks and deep learning
+3. ML Algorithms [Full intro course](https://www.youtube.com/watch?v=NWONeJKn6kc)
+    - [ ] Linear regression
+    - [ ] Logisitc regression
+    - [ ] Decision tree
+    - [ ] Random forest
+    - [ ] Svm
+    - [ ] K nearest neighbor (KNN)
+    - [ ] K means clustering
+    - [ ] Principal component analysis (PCA)
+    - [ ] Reinforcement learning
+    - [ ] Q learning
+4. Neural networks and deep learning
 5. RNNs, Transformers and GAN based models

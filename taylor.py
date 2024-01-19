@@ -1,24 +1,35 @@
 from matplotlib import pyplot as plt
-from scipy.misc import derivative
 from math import factorial
+import sympy
+
+class MathFuncs():
+    def __init__(self):
+        print("MathFuncs initialized!")
+
+    def square(self, x):
+        return x ** 2
+
+    def cube(self, x):
+        return x ** 3
+
+    def func1(self, x):
+        return (x ** 3) - 6 * (x ** 2) + 9 * x
+
 
 class TaylorSeries():
-    def __init__(self, f, order, center = 0):
-        self.center = center
+    def __init__(self, f, count):
         self.f = f
-        self.order = order
-        self.d_pts = order * 2
+        self.count = count
         self.coefficients = []
-
-        if self.d_pts % 2 == 0:
-            self.d_pts += 1
 
         self.__find_coefficients()
 
     def __find_coefficients(self):
-        for i in range(0, self.order + 1):
-            self.coefficients.append(round(derivative(
-                self.f, self.center, n=i, order=self.d_pts)/factorial(i), 5))
+        for i in range(0, self.count + 1): # i is which degree of deriv here
+            x = sympy.symbols("x")
+            deriv = sympy.diff(self.f, x, i)
+            print(deriv)
+            # self.coefficients.append(deriv / factorial(i))
 
     def print_equation(self):
         print(self.coefficients)
@@ -26,18 +37,12 @@ class TaylorSeries():
     def approx_value(self, x):
         fx = 0
         for i in range(len(self.coefficients)):
-            fx += self.coefficients[i] * ((x - self.center) ** i) # coefficient to the *nth term (** power op)
+            fx += self.coefficients[i] * (x ** i) # coefficient to the *nth term (** power op)
 
         return fx
 
     def get_func(self):
         return self.f
-
-def square(x):
-    return x ** 2
-
-def cube(x):
-    return x ** 3
 
 def main():
     x = []
@@ -45,12 +50,14 @@ def main():
     bot = -5
     top = 6
 
-    ts = TaylorSeries(cube, 15, 0)
+    mf = MathFuncs()
+
+    ts = TaylorSeries(mf.func1, 2)
     ts.print_equation()
 
     for i in range(bot, top):
         x.append(i)
-        y.append(square(i))
+        y.append(ts.f(i))
 
     plt.plot(x, y, label=(ts.get_func().__name__))
 
