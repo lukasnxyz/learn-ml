@@ -1,11 +1,8 @@
 from matplotlib import pyplot as plt
-from math import factorial
+from math import factorial, sqrt
 import sympy
 
-class MathFuncs():
-    def __init__(self):
-        print("MathFuncs initialized!")
-
+class MathFunc():
     def square(self, x):
         return x ** 2
 
@@ -13,8 +10,11 @@ class MathFuncs():
         return x ** 3
 
     def func1(self, x):
-        return (x ** 3) - 6 * (x ** 2) + 9 * x
+        # from my recent calc exam lol
+        return (x ** 3) - (6 * (x ** 2)) + (9 * x)
 
+    def sqrootx(self, x):
+        return sqrt(x)
 
 class TaylorSeries():
     def __init__(self, f, count):
@@ -47,12 +47,12 @@ class TaylorSeries():
 def main():
     x = []
     y = []
-    bot = -5
-    top = 6
+    bot = -2
+    top = 3
 
-    mf = MathFuncs()
+    mf = MathFunc()
 
-    ts = TaylorSeries(mf.func1, 2)
+    ts = TaylorSeries(mf.cube, 2)
     ts.print_equation()
 
     for i in range(bot, top):

@@ -6,3 +6,4 @@ For now this is just me learning about machine learning, deep learning and neura
 ### Download datasets
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
 - [MNIST](https://www.kaggle.com/datasets/avnishnish/mnist-original)
+- [height weight](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
