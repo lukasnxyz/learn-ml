@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 def loss_function(m, b, points):
     # necesarry as we need the partial derivative of the mse for gradient decent
@@ -41,9 +42,8 @@ def gradient_decent(m_now, b_now, points, rate): # rate is learning rate
     return m, b
 
 def train(m, b, data, rate, epochs):
-    for i in range(epochs):
+    for i in tqdm(range(epochs), desc="training"):
         m, b = gradient_decent(m, b, data, rate)
-        print(f"Epoch: {i}")
 
     return m, b
 
@@ -58,8 +58,8 @@ def main():
     m, b = train(m, b, data, rate, epochs)
 
     loss = loss_function(m, b, data)
-    print(m, b) # any number
-    print(loss) # want close to 0
+    print("m:", m, "b:", b) # any number
+    print("MSE:", loss) # want close to 0
 
     plt.scatter(data.x, data.y, color="black")
     plt.plot(list(range(55, 80)), [m * x + b for x in range(55, 80)], color="red")
