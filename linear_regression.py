@@ -35,36 +35,34 @@ def gradient_decent(m_now, b_now, points, rate): # rate is learning rate
         m_gradient += -(2/n) * x * (y - ((m_now * x) + b_now))
         b_gradient += -(2/n) * (y - ((m_now * x) + b_now))
 
-    m = m_now - rate * m_gradient
-    b = b_now - rate * b_gradient
+    m = m_now - m_gradient * rate
+    b = b_now - b_gradient * rate
 
-    # m = m_now - m_gradient * rate
-    # b = b_now - b_gradient * rate
+    return m, b
+
+def train(m, b, data, rate, epochs):
+    for i in range(epochs):
+        m, b = gradient_decent(m, b, data, rate)
+        print(f"Epoch: {i}")
 
     return m, b
 
 def main():
-    # data = pd.read_csv("data/height-weight-no-label.csv")
-    data = pd.read_csv("data/times_two.csv")
-    # just looks like this: [[0, 0], [1, 2], [2, 4], [3, 6]] until x = 10
+    data = pd.read_csv("data/height-weight-no-label.csv")
 
     m = 0
     b = 0
     rate = 0.0001
     epochs = 1000
 
-    for i in range(epochs):
-        m, b = gradient_decent(m, b, data, rate)
-        print(f"Epoch: {i}")
+    m, b = train(m, b, data, rate, epochs)
 
     loss = loss_function(m, b, data)
     print(m, b) # any number
     print(loss) # want close to 0
-    print(f"Test x = 40, y = 80, yhat: {m * 40 + b}")
 
     plt.scatter(data.x, data.y, color="black")
-    #plt.plot(list(range(55, 80)), [m * x + b for x in range(55, 80)], color="red")
-    plt.plot(list(range(0, 10)), [m * x + b for x in range(0, 10)], color="red")
+    plt.plot(list(range(55, 80)), [m * x + b for x in range(55, 80)], color="red")
     plt.title(str(loss))
     plt.show()
 
