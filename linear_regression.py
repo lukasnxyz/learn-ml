@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from tqdm import tqdm
+from random import randint
 
 def loss_function(m, b, points):
     # necesarry as we need the partial derivative of the mse for gradient decent
@@ -42,18 +43,19 @@ def gradient_decent(m_now, b_now, points, rate): # rate is learning rate
     return m, b
 
 def train(m, b, data, rate, epochs):
-    # for _ in tqdm(range(epochs), desc="training"):
-    for _ in range(epochs):
+    bar = tqdm(range(epochs))
+    bar.set_description("Training")
+    for _ in bar:
+        #bar.set_description("Training. " + "m: {:.5f}, ".format(m) + "b: {:.5f}".format(b))
         m, b = gradient_decent(m, b, data, rate)
-        print(m , b)
 
     return m, b
 
 def main():
     data = pd.read_csv("data/height-weight-no-label.csv")
 
-    m = 0
-    b = 0
+    m = randint(0, 10) # I think it's pretty important to pick a proper range for weights
+    b = randint(100, 200) * -1
     rate = 1e-4
     epochs = 1000
 
@@ -64,7 +66,7 @@ def main():
 
     loss = loss_function(m, b, data)
     print("m:", m, "b:", b) # any number
-    print("MSE:", loss) # want close to 0
+    print("MSE:", loss) # want close to 0 although 0 is not possible for a not fully linear function
 
     plt.scatter(data.x, data.y, color="black")
     plt.plot(list(range(62, 75)), [m * x + b for x in range(62, 75)], color="red")
