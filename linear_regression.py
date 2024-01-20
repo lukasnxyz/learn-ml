@@ -42,8 +42,10 @@ def gradient_decent(m_now, b_now, points, rate): # rate is learning rate
     return m, b
 
 def train(m, b, data, rate, epochs):
-    for i in tqdm(range(epochs), desc="training"):
+    # for _ in tqdm(range(epochs), desc="training"):
+    for _ in range(epochs):
         m, b = gradient_decent(m, b, data, rate)
+        print(m , b)
 
     return m, b
 
@@ -52,8 +54,11 @@ def main():
 
     m = 0
     b = 0
-    rate = 0.0001
+    rate = 1e-4
     epochs = 1000
+
+    # Getting increased loss values instead of converging to a minimum is usually a sign that learning rate is too high.
+    # https://stackoverflow.com/questions/39314946/why-does-my-linear-regression-get-nan-values-instead-of-learning
 
     m, b = train(m, b, data, rate, epochs)
 
@@ -62,7 +67,7 @@ def main():
     print("MSE:", loss) # want close to 0
 
     plt.scatter(data.x, data.y, color="black")
-    plt.plot(list(range(55, 80)), [m * x + b for x in range(55, 80)], color="red")
+    plt.plot(list(range(62, 75)), [m * x + b for x in range(62, 75)], color="red")
     plt.title(str(loss))
     plt.show()
 
