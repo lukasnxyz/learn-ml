@@ -1,4 +1,9 @@
 ## Notes
+- The difference between an ml engineer and a software engineer is that the software engineer writes
+  the algorithms and such for the libraries that the ml engineers use. I want to do both. I don't
+  want to be only an ml engineer (data scientist), because that's boring. I want to be an ml
+  software engineer. That sounds much more exciting. And want to build and deploy homemade ml
+  algorithms.
 
 ### Tutorials
 - [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
@@ -30,11 +35,6 @@
 	3. w - derivative of cost function (limit as h->0)
 	4. Apply learning rate
 	5. Iterate many times
-
-### Ideas
-- Python neural network class to use for other things
-- Crypto Predicition
-- Something like ChatGPT that sites it's sources will over take Google as a search engine
 
 ### Learning steps (bottom up)
 Types of ML
