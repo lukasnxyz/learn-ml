@@ -49,8 +49,8 @@ def main():
     # this is more of a true or false algo because of the sigmoid function
     # more for categorical data and classification
 
-    m = 0
-    b = 0
+    m = 0 # weights
+    b = 0 # single bias
     epochs = 250
     rate = 0.001
 

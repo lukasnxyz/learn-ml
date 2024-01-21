@@ -54,12 +54,10 @@ def train(m, b, data, rate, epochs):
 def main():
     data = pd.read_csv("../data/height-weight-no-label.csv")
 
-    # m = randint(0, 10) # I think it's pretty important to pick a proper range for weights
-    # b = randint(100, 200) * -1
-    m = 1
-    b = 0
-    rate = 1e-3
-    epochs = 5000
+    m = randint(0, 10) # I think it's pretty important to pick a proper range for weights
+    b = randint(100, 200) * -1
+    rate = 1e-4
+    epochs = 1000
 
     # Getting increased loss values instead of converging to a minimum is usually a sign that learning rate is too high.
     # https://stackoverflow.com/questions/39314946/why-does-my-linear-regression-get-nan-values-instead-of-learning
