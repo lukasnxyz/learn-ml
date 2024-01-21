@@ -1,5 +1,7 @@
 import numpy as np
 import csv
+from tqdm import tqdm
+from sklearn.model_selection import train_test_split
 
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
@@ -8,7 +10,7 @@ def accuracy(ys_pred, ys_test):
     return np.sum(ys_pred == ys_test) / len(ys_test)
 
 class LogisiticRegression():
-    def __init__(self, rate=1e-4, epochs=250):
+    def __init__(self, rate=1e-2, epochs=5000):
         self.rate = rate
         self.epochs = epochs
         self.weights = None
@@ -19,8 +21,7 @@ class LogisiticRegression():
         self.weights = np.zeros(n_features)
         self.bias = 0
 
-        for i in range(self.epochs):
-            print("Epoch:", i)
+        for _ in tqdm(range(self.epochs), desc="Training"):
             linear_pred = np.dot(features, self.weights) + self.bias
             predictions = sigmoid(linear_pred)
 
@@ -49,14 +50,10 @@ def main():
     features = data[:, 1:]
     ys = data[:, 0]
 
-    clf = LogisiticRegression()
-    clf.fit(features, ys)
+    features_train, features_test, ys_train, ys_test = train_test_split(features, ys, test_size=0.2, random_state=1234)
 
-    features_test = np.array([[66.786927239528, 165.431242225646],
-        [72.6331067350844, 208.066256946822],
-        [63.360509749283, 134.955817345201],
-        [61.2018091899706, 102.179562817238]])
-    ys_test = np.array([1, 1, 0, 0])
+    clf = LogisiticRegression()
+    clf.fit(features_train, ys_train)
 
     ys_pred = clf.predict(features_test)
     print(accuracy(ys_test, ys_pred))
