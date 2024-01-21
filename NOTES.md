@@ -54,7 +54,7 @@ Different tasks
 2. Kaggle intro to ml and intermediate ml
 3. ML Algorithms
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
-    - [ ] Logisitc regression
+    - [ ] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [ ] Decision tree
     - [ ] Random forest
     - [ ] Svm
