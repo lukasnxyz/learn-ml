@@ -1,10 +1,11 @@
 import matplotlib.pyplot as plt
 from pandas import read_csv
-from numpy import exp
+import numpy as np
 
 def sigmoid(x):
-    return 1/(1 + exp(-x))
+    return 1/(1 + np.exp(-x))
 
+'''
 def gradient_descent(m_now, b_now, points, rate):
     m_gradient = 0
     b_gradient = 0
@@ -40,25 +41,47 @@ def predict(m, b, x):
         return 0
     else:
         return 1
+'''
+
+class LogisiticRegression():
+    def __init__(self, rate=1e-3, epochs=250):
+        self.rate = rate
+        self.epochs = epochs
+        self.weights = None
+        self.bias = None
+
+    def fit(self, features, y): # features is a height and weight vector, y is a scalar 1 or 0 for male or female
+        n_samples, n_features = features.shape # .shape gives number of rows, number of columns
+        self.weights = np.zeros(n_features)
+        self.bias = 0
+
+        for _ in range(self.epochs):
+            linear_pred = np.dot(features, self.weights) + self.bias
+            predictions = sigmoid(linear_pred)
+
+            dw = (1/n_samples) * np.dot(features.T, (predictions - y))
+            db = (1/n_samples) * np.sum(predictions - y)
+
+            self.weights = self.weights - dw * self.rate
+            self.bias = self.bias - db * self.rate
+
+'''
+    def predict(self, features):
+        lienar_pred = np.dot(features, self.weights) + self.bias
+        y_pred = sigmoid(linear_pred)
+        class_pred = [0 if y <= 0.5 else 1 for y  in y_pred]
+        return class_pred
+    '''
 
 def main():
-    # this is all wrong!
     data = read_csv("../data/height-weight.csv")
 
     # need to use logistic regression for true or false problems
     # this is more of a true or false algo because of the sigmoid function
     # more for categorical data and classification
 
-    m = 0 # weights
-    b = 0 # single bias
-    epochs = 250
-    rate = 0.001
-
-    m, b = train(m, b, data, rate, epochs)
-
-    plt.scatter(data.x, data.y, color="black")
-    plt.plot(list(range(62, 75)), [m * x + b for x in range(62, 75)], color="red")
-    plt.show()
+    features = np.array([data.height, data.weight])
+    print(features)
 
 if __name__ == "__main__":
     main()
