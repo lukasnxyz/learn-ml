@@ -1,7 +1,5 @@
-import pandas as pd
 import numpy as np
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
+import csv
 
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
@@ -29,52 +27,36 @@ class LogisiticRegression():
             dw = (1/n_samples) * np.dot(features.T, (predictions - y))
             db = (1/n_samples) * np.sum(predictions - y)
 
-            print(dw.shape)
-            print(dw)
-            print(self.weights.shape)
-            print(self.weights)
             self.weights = self.weights - dw * self.rate
             self.bias = self.bias - db* self.rate
-            return
 
     def predict(self, features):
         linear_pred = np.dot(features, self.weights) + self.bias
         y_pred = sigmoid(linear_pred)
-        class_pred = [0 if y <= 0.5 else 1 for y  in y_pred]
+        class_pred = [0 if y <= 0.5 else 1 for y in y_pred]
         return class_pred
 
 def main():
-    '''
-    bc = datasets.load_breast_cancer()
-    features, ys = bc.data, bc.target
-    features_train, features_test, ys_train, ys_test = train_test_split(features, ys, test_size=0.2, random_state=1234)
+    #data = pd.read_csv("../data/height-weight.csv")
+    with open("../data/height-weight.csv", "r") as file:
+        reader = csv.reader(file)
+        data_csv = list(reader)
 
-    clf = LogisiticRegression(epochs=1000)
-    print(features_train.shape)
-    clf.fit(features_train, ys_train)
-    ys_pred = clf.predict(features_test)
-    print(accuracy(ys_pred, ys_test))
+    data = np.array(data_csv)
+    data = np.delete(data, (0), axis=0)
+    data = data.astype(float)
 
-'''
-    data = pd.read_csv("../data/height-weight.csv")
-
-    features = np.full((len(data.height), 2), 0.0)
-    ys = np.full((len(data.gender), 1), 0.0)
-    for i in range(2):
-        for x in range(len(data.height)):
-            if i == 0:
-                features[x][i] = data.height[x]
-            else:
-                features[x][i] = data.weight[x]
-
-    for i in range(len(data.gender)):
-        ys[i] = data.gender[i]
+    features = data[:, 1:]
+    ys = data[:, 0]
 
     clf = LogisiticRegression()
     clf.fit(features, ys)
 
-    features_test = np.array([66.786927239528, 165.431242225646])
-    ys_test = np.array([1])
+    features_test = np.array([[66.786927239528, 165.431242225646],
+        [72.6331067350844, 208.066256946822],
+        [63.360509749283, 134.955817345201],
+        [61.2018091899706, 102.179562817238]])
+    ys_test = np.array([1, 1, 0, 0])
 
     ys_pred = clf.predict(features_test)
     print(accuracy(ys_test, ys_pred))
