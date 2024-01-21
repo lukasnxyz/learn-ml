@@ -29,7 +29,7 @@ class LogisiticRegression():
             db = (1/n_samples) * np.sum(predictions - y)
 
             self.weights = self.weights - dw * self.rate
-            self.bias = self.bias - db* self.rate
+            self.bias = self.bias - db * self.rate
 
     def predict(self, features):
         linear_pred = np.dot(features, self.weights) + self.bias
