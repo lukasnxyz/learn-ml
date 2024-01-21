@@ -1,50 +1,16 @@
-import matplotlib.pyplot as plt
-from pandas import read_csv
+import pandas as pd
 import numpy as np
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
 
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
 
-'''
-def gradient_descent(m_now, b_now, points, rate):
-    m_gradient = 0
-    b_gradient = 0
-    n = len(points)
-
-    for i in range(n):
-        x = float(points.iloc[i].x)
-        y = float(points.iloc[i].y)
-
-        linear_pred = m_now * x + b_now
-        pred = sigmoid(linear_pred)
-
-        m_gradient = (1/n) * (x * (pred - y))
-        b_gradient = (1/n) * (pred - y)
-
-    m = m_now - m_gradient * rate
-    b = b_now - b_gradient * rate
-
-    return m, b
-
-def train(m, b, points, rate, epochs):
-    for i in range(epochs):
-        m, b = gradient_descent(m, b, points, rate)
-        print(f"{i}: m = {m}, b = {b}")
-
-    return m, b
-
-def predict(m, b, x):
-    linear_pred = m * x + b
-    pred = sigmoid(linear_pred)
-
-    if pred <= 0.5:
-        return 0
-    else:
-        return 1
-'''
+def accuracy(ys_pred, ys_test):
+    return np.sum(ys_pred == ys_test) / len(ys_test)
 
 class LogisiticRegression():
-    def __init__(self, rate=1e-3, epochs=250):
+    def __init__(self, rate=1e-4, epochs=250):
         self.rate = rate
         self.epochs = epochs
         self.weights = None
@@ -55,33 +21,67 @@ class LogisiticRegression():
         self.weights = np.zeros(n_features)
         self.bias = 0
 
-        for _ in range(self.epochs):
+        for i in range(self.epochs):
+            print("Epoch:", i)
             linear_pred = np.dot(features, self.weights) + self.bias
             predictions = sigmoid(linear_pred)
 
             dw = (1/n_samples) * np.dot(features.T, (predictions - y))
             db = (1/n_samples) * np.sum(predictions - y)
 
+            print(dw.shape)
+            print(dw)
+            print(self.weights.shape)
+            print(self.weights)
             self.weights = self.weights - dw * self.rate
-            self.bias = self.bias - db * self.rate
+            self.bias = self.bias - db* self.rate
+            return
 
-'''
     def predict(self, features):
-        lienar_pred = np.dot(features, self.weights) + self.bias
+        linear_pred = np.dot(features, self.weights) + self.bias
         y_pred = sigmoid(linear_pred)
         class_pred = [0 if y <= 0.5 else 1 for y  in y_pred]
         return class_pred
-    '''
 
 def main():
-    data = read_csv("../data/height-weight.csv")
+    '''
+    bc = datasets.load_breast_cancer()
+    features, ys = bc.data, bc.target
+    features_train, features_test, ys_train, ys_test = train_test_split(features, ys, test_size=0.2, random_state=1234)
+
+    clf = LogisiticRegression(epochs=1000)
+    print(features_train.shape)
+    clf.fit(features_train, ys_train)
+    ys_pred = clf.predict(features_test)
+    print(accuracy(ys_pred, ys_test))
+
+'''
+    data = pd.read_csv("../data/height-weight.csv")
+
+    features = np.full((len(data.height), 2), 0.0)
+    ys = np.full((len(data.gender), 1), 0.0)
+    for i in range(2):
+        for x in range(len(data.height)):
+            if i == 0:
+                features[x][i] = data.height[x]
+            else:
+                features[x][i] = data.weight[x]
+
+    for i in range(len(data.gender)):
+        ys[i] = data.gender[i]
+
+    clf = LogisiticRegression()
+    clf.fit(features, ys)
+
+    features_test = np.array([66.786927239528, 165.431242225646])
+    ys_test = np.array([1])
+
+    ys_pred = clf.predict(features_test)
+    print(accuracy(ys_test, ys_pred))
 
     # need to use logistic regression for true or false problems
     # this is more of a true or false algo because of the sigmoid function
     # more for categorical data and classification
-
-    features = np.array([data.height, data.weight])
-    print(features)
 
 if __name__ == "__main__":
     main()
