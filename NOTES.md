@@ -53,7 +53,7 @@ Different tasks
 1. [DSA](https://frontendmasters.com/courses/algorithms/)
 2. Kaggle intro to ml and intermediate ml
 3. ML Algorithms
-    - [ ] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
+    - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
     - [ ] Logisitc regression
     - [ ] Decision tree
     - [ ] Random forest
