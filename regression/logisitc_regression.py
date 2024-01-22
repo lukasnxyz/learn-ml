@@ -9,7 +9,7 @@ def sigmoid(x):
 def accuracy(ys_pred, ys_test):
     return np.sum(ys_pred == ys_test) / len(ys_test)
 
-class LogisiticRegression():
+class LogisiticRegression:
     def __init__(self, rate=1e-2, epochs=5000):
         self.rate = rate
         self.epochs = epochs
