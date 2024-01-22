@@ -56,7 +56,8 @@ def main():
     clf.fit(features_train, ys_train)
 
     ys_pred = clf.predict(features_test)
-    print(accuracy(ys_test, ys_pred))
+    a = accuracy(ys_test, ys_pred) * 100
+    print("Accuracy: " + "{:.2f}%".format(a))
 
     # need to use logistic regression for true or false problems
     # this is more of a true or false algo because of the sigmoid function

@@ -50,8 +50,8 @@ Different tasks
 - Classic machine learning
 
 ### Learning
-1. [DSA](https://frontendmasters.com/courses/algorithms/)
-2. ML Algorithms
+1. [ ] [DSA](https://frontendmasters.com/courses/algorithms/)
+2. [.] ML Algorithms
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [ ] Decision tree
@@ -62,6 +62,7 @@ Different tasks
     - [ ] Principal component analysis (PCA)
     - [ ] Reinforcement learning
     - [ ] Q learning
-3. Some course on pytorch, tensorflow, or similar?
-4. Neural networks and deep learning
-5. RNNs, Transformers and GAN based models
+3. [ ] Project: MNIST classifier
+4. Some course on pytorch, tensorflow, or similar?
+5. Neural networks and deep learning
+6. RNNs, Transformers and GAN based models
