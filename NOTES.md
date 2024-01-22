@@ -4,6 +4,8 @@
   want to be only an ml engineer (data scientist), because that's boring. I want to be an ml
   software engineer. That sounds much more exciting. And want to build and deploy homemade ml
   algorithms.
+- Finding a good dataset to train on is very difficult, the best one so far is
+  [this one](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 
 ### Tutorials
 - [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
@@ -12,11 +14,13 @@
 - [MNIST classifier from scratch](https://github.com/kdexd/digit-classifier)
 - [Stanford CS229 ML course](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
 - [Python refresher](https://learnxinyminutes.com/docs/python/)
+- [Full course Intro to ML](https://www.udacity.com/course/intro-to-machine-learning--ud120)
 
 ### What is?
 - [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
 - [Relu](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)
 - [MNIST - The Hello World of ML](https://en.wikipedia.org/wiki/MNIST_database)
+- [Adam optimizer](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
 
 ### Other
 - [Tinygrad first commit](https://github.com/tinygrad/tinygrad/tree/1bb258350092defd802cf6fbb94b1e8de96935cc)
@@ -52,17 +56,27 @@ Different tasks
 ### Learning
 1. [DSA](https://frontendmasters.com/courses/algorithms/)
 2. ML Algorithms
+    - [ ] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [ ] Decision tree
     - [ ] Random forest
-    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
-    - [ ] K nearest neighbor (KNN)
-    - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
+    - [ ] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
     - [ ] Principal component analysis (PCA)
-    - [ ] Reinforcement learning
-    - [ ] Q learning
+    - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
+    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
+    - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
+    - Some sort of larger project
 3. Project: MNIST classifier
-4. Some course on pytorch, tensorflow, or similar?
+4. Learn pytorch or another ml library
 5. Neural networks and deep learning
 6. RNNs, Transformers and GAN based models
+
+### Installed libraries
+- python-datasets
+- python-matplotlib
+- python-tqdm
+- python-scikit-learn
+- python-pandas
+- python-sympy
+- python-scipy
