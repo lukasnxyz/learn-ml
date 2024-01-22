@@ -66,7 +66,7 @@ Different tasks
     - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
     - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
     - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
-    - Some sort of larger project
+    - Some sort of larger project (maybe bitcoin price predictor)
 3. Project: MNIST classifier
 4. Learn pytorch or another ml library
 5. Neural networks and deep learning
