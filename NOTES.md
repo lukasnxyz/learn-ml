@@ -56,7 +56,7 @@ Different tasks
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [ ] Decision tree
     - [ ] Random forest
-    - [ ] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
+    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
     - [ ] K nearest neighbor (KNN)
     - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
     - [ ] Principal component analysis (PCA)
