@@ -7,6 +7,7 @@
 - Finding a good dataset to train on is very difficult, the best one so far is
   [this one](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 - ML dev stack: python, jupyter-notebook, numpy, pandas, matplotlib
+- I need to learn how to debug matrix shape mismatches (it's very daunting right now)
 
 ### Tutorials
 - [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)

@@ -66,7 +66,7 @@ def main():
 
     loss = loss_function(m, b, data)
     print("m:", m, "b:", b) # any number
-    print("MSE:", loss) # want close to 0 although 0 is not possible for a not fully linear function
+    print("MSE:", loss) # want close to 0 although 0 is not possible for a not fully linear function (this is wrong)
 
     plt.scatter(data.x, data.y, color="black")
     plt.plot(list(range(62, 75)), [m * x + b for x in range(62, 75)], color="red")
