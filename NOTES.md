@@ -6,6 +6,7 @@
   algorithms.
 - Finding a good dataset to train on is very difficult, the best one so far is
   [this one](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
+- ML dev stack: python, jupyter-notebook, numpy, pandas, matplotlib
 
 ### Tutorials
 - [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
@@ -21,10 +22,6 @@
 - [Relu](https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/)
 - [MNIST - The Hello World of ML](https://en.wikipedia.org/wiki/MNIST_database)
 - [Adam optimizer](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
-
-### Other
-- [Tinygrad first commit](https://github.com/tinygrad/tinygrad/tree/1bb258350092defd802cf6fbb94b1e8de96935cc)
-- ML dev stack: python, jupyter-notebook, numpy, pandas, matplotlib
 
 ### General notes
 - Progress bar in python: tqdm
@@ -56,15 +53,15 @@ Different tasks
 ### Learning
 1. [DSA](https://frontendmasters.com/courses/algorithms/)
 2. ML Algorithms
-    - [ ] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
+    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
-    - [ ] Decision tree
+    - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
+    - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
     - [ ] Random forest
     - [ ] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
     - [ ] Principal component analysis (PCA)
     - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
-    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
     - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
     - Some sort of larger project (maybe bitcoin price predictor)
 3. Project: MNIST classifier
@@ -72,11 +69,18 @@ Different tasks
 5. Neural networks and deep learning
 6. RNNs, Transformers and GAN based models
 
+### Ideas I wan to do
+- An ML library
+    - basic algo's
+    - NN's
+
 ### Installed libraries
-- python-datasets
-- python-matplotlib
-- python-tqdm
-- python-scikit-learn
-- python-pandas
-- python-sympy
-- python-scipy
+```
+python-datasets
+python-matplotlib
+python-tqdm
+python-scikit-learn
+python-pandas
+python-sympy
+python-scipy
+```

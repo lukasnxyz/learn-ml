@@ -6,7 +6,7 @@ import csv
 # You want to categorize objects into two or more classes
 # Dog or cat? Stock up or down?
 # Supervised learning
-class SVM:
+class SVM():
     def __init__(self, lr=1e-4, lam=1e-2, epochs=500):
         self.lr = lr
         self.lam = lam
