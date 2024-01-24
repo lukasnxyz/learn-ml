@@ -57,6 +57,7 @@ Different tasks
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
     - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
         - https://towardsdatascience.com/implement-multiclass-svm-from-scratch-in-python-b141e43dc084
+        - https://www.youtube.com/watch?v=Q7vT0--5VII
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
@@ -75,14 +76,3 @@ Different tasks
 - An ML library
     - basic algo's
     - NN's
-
-### Installed libraries
-```
-python-datasets
-python-matplotlib
-python-tqdm
-python-scikit-learn
-python-pandas
-python-sympy
-python-scipy
-```
