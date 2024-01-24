@@ -58,19 +58,21 @@ Different tasks
     - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
         - https://towardsdatascience.com/implement-multiclass-svm-from-scratch-in-python-b141e43dc084
         - https://www.youtube.com/watch?v=Q7vT0--5VII
+        - https://stackoverflow.com/questions/62242579/implementing-svm-rbf
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
     - [ ] Random forest
     - [X] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
     - [ ] Principal component analysis (PCA)
-    - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
     - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
+    - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
     - Some sort of larger project (maybe bitcoin price predictor)
 3. Project: MNIST classifier
-4. Learn pytorch or another ml library
-5. Neural networks and deep learning
-6. RNNs, Transformers and GAN based models
+4. Learn basics of pytorch
+5. Perceptron and Feed Forward neural networks
+6. Convolutional and Recurrnet nerual networks
+7. Transformers
 
 ### Ideas I wan to do
 - An ML library

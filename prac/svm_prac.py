@@ -55,12 +55,12 @@ class SVM:
 
         for _ in tqdm(range(self.epochs), desc="Training SVM"):
             for idx, x_i in enumerate(X):
-                self.K = self.kernel(x_i, X[idx],  q=10)
+                self.K = self.kernel(X, X,  q=10)
 
                 decision_function = np.dot(self.K, self.weights) - self.bias
                 condition = y[idx] * decision_function >= 1
 
-                if condition: # line is overfitted
+                if condition[0]: # line is overfitted
                     self.weights -= self.lr * (2 * self.lam * self.weights)
                 else: # line is underfitted
                     gradient = (2 * self.lam * self.weights) - (y[idx] * self.K)
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-    clf = SVM(lr=0.001, kernel="rbf", lam=5, epochs=750)
+    clf = SVM(lr=0.001, kernel="linear", lam=5, epochs=750)
     clf.fit(X_train, y_train)
     predictions = clf.predict(X_test)
 
