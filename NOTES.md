@@ -56,6 +56,7 @@ Different tasks
 2. ML Algorithms
     - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
     - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
+        - https://towardsdatascience.com/implement-multiclass-svm-from-scratch-in-python-b141e43dc084
     - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
     - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
