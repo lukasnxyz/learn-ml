@@ -8,6 +8,9 @@
   [this one](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 - ML dev stack: python, jupyter-notebook, numpy, pandas, matplotlib
 - I need to learn how to debug matrix shape mismatches (it's very daunting right now)
+- See https://github.com/Avik-Jain/100-Days-Of-ML-Code/blob/master/Code/Day%2013%20SVM.md#importing-the-dataset
+  to properly import a dataset from a csv file
+- Use more asserts!
 
 ### Tutorials
 - [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)

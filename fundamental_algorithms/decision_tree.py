@@ -5,6 +5,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import numpy as np
 
+# doesn't work
 class Node():
     def __init__(self, feature=None, threshhold=None, left=None, right=None, *, value=None):
         self.feature = feature
