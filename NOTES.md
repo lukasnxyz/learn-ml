@@ -60,7 +60,7 @@ Different tasks
     - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
     - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
     - [ ] Random forest
-    - [ ] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
+    - [X] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
     - [ ] Principal component analysis (PCA)
     - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
     - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
