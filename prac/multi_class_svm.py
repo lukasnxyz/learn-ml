@@ -4,8 +4,9 @@ from tqdm import tqdm
 from scipy.spatial import distance # for Guassian kernel
 
 # note: can use something like
-# @SVMClass
-# def fit(self, X, y):
+#   @SVMClass
+#   def fit(self, X, y):
+#       implement_func()
 # to implement a method outside of it's parent class
 
 def accuracy(true, pred):
