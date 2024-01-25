@@ -10,9 +10,10 @@ from scipy.interpolate import Rbf
 #       implement_func()
 # to implement a method outside of it's parent class
 
-# Practice:
-# Implement working kernels
-# Implement multiclass (>= 3)
+# note: svm is mainly a binary classification algorithm
+# practice:
+# implement working kernels
+# implement multiclass (>= 3)
 
 def accuracy(true, pred):
     return np.sum(true == pred) / len(true)

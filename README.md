@@ -1,5 +1,9 @@
-## ml
+## learn-ml
 For now this is just me learning about machine learning, deep learning and neural networks.
+
+### Guide
+This is a basic learning plan I'm working on to get up to speed on the basics of machine learning and
+understanding the fields ML, DL and other related topics for becoming an ML/Software Engineer.
 
 [Notes](NOTES.md)
 
