@@ -100,11 +100,10 @@ if __name__ == "__main__":
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-    perc = Perceptron(lr=0.0001, epochs=500, activ_func=unit_step)
+    perc = Perceptron(lr=0.0001, epochs=500, activ_func=relu)
     perc.fit(X, y)
 
     preds = perc.predict(X_test)
-    print(preds, y)
     a = accuracy(y_test, preds)
 
     print("Accuracy: %.3f" % (a))
