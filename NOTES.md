@@ -33,6 +33,8 @@
 	3. w - derivative of cost function (limit as h->0)
 	4. Apply learning rate
 	5. Iterate many times
+- Supervised learning: given f and x, find f(x)
+- Unsupervised learning: given x find f or some sort of pattern
 
 ### Learning steps (bottom up)
 Types of ML

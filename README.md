@@ -50,7 +50,7 @@ how the previous topics work from implementing them.
     - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
 3. Stanford CS229 ML course on youtube until neural networks
-    - [ ] [Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
+    - [X] [Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
     - [ ] [Lecture 2 - Linear Regression and Gradient Descent](https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2)
     - [ ] [Lecture 3 - Logistic Regression](https://www.youtube.com/watch?v=het9HFqo1TQ&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=3)
     - [ ] [Lecture 4 - Perceptron](https://www.youtube.com/watch?v=iZTeva0WSTQ&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=4)
