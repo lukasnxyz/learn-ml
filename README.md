@@ -49,6 +49,7 @@ how the previous topics work from implementing them.
         - [Video tutorial](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
     - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
+        - [A Little About Perceptrons and Activation Functions](https://medium.com/mlearning-ai/a-little-about-perceptrons-and-activation-functions-aed19d672656)
 3. Stanford CS229 ML course on youtube until neural networks
     - [X] [Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
     - [ ] [Lecture 2 - Linear Regression and Gradient Descent](https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2)
@@ -69,8 +70,8 @@ how the previous topics work from implementing them.
 5. Learn basics of pytorch (or any other popular ML library)
 6. Projects:
     - [ ] Random algo implement from scratch with math notes
-    - [ ] MNIST classifier (both pytorch and scratch if possible)
-7. Perceptron and Feed Forward neural networks
+    - [ ] MNIST classifier (both pytorch and from scratch if possible)
+7. Multilayer Perceptron/Feed Forward neural network
 8. Convolutional and Recurrent neural networks
 9. Stanford CS229 ML course on youtube neural networks until end
 10. Finish The 100 Page Machine Learning Book from step 4
@@ -85,6 +86,7 @@ how the previous topics work from implementing them.
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
+- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
 - [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
 - [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
 - [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)

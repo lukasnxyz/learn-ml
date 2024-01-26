@@ -41,7 +41,13 @@ def accuracy(true, pred):
     return a
 
 def unit_step(x):
+    # 0 where x < 0, 1 where x > 0
     return np.where(x > 0, 1, 0)
+
+def relu(x):
+    # rectified linear unit
+    # 0 where x < 0, x where x > 0
+    return np.where(x > 0, x, 0)
 
 class Perceptron:
     def __init__(self, lr=0.001, epochs=500, activ_func=unit_step):
@@ -57,9 +63,9 @@ class Perceptron:
         self.weights = np.zeros(n_features)
         self.bias = 0
 
-        y_ = np.where(y > 0, 1, 0)
+        y_ = [relu(y_i) for y_i in y]
 
-        for _ in tqdm(range(self.epochs), desc="Training"):
+        for _ in tqdm(range(self.epochs)):
             for id, x_i in enumerate(X):
                 f = np.dot(x_i, self.weights) + self.bias
                 fhat = self.activ_func(f)
@@ -74,6 +80,7 @@ class Perceptron:
         return y_preds
 
 if __name__ == "__main__":
+    '''
     with open("../data/height-weight.csv", "r") as file:
         reader = csv.reader(file)
         data_csv = list(reader)
@@ -84,22 +91,20 @@ if __name__ == "__main__":
 
     X = data[:, :-1]
     y = data[:, -1]
-
     '''
+
     from sklearn import datasets
     X, y = datasets.make_blobs(
-            n_samples=4000, n_features=2, centers=2, cluster_std=1.05, random_state=2
+            n_samples=3000, n_features=2, centers=2, cluster_std=1.05, random_state=2
     )
-    '''
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
 
-    perc = Perceptron(lr=0.0001, epochs=1000)
+    perc = Perceptron(lr=0.0001, epochs=500, activ_func=unit_step)
     perc.fit(X, y)
 
     preds = perc.predict(X_test)
+    print(preds, y)
     a = accuracy(y_test, preds)
 
     print("Accuracy: %.3f" % (a))
-
-
