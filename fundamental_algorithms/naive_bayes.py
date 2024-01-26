@@ -1,6 +1,8 @@
 import numpy as np
 
+# Use of Bayes Theory
 # probability
+# Naive becuase it assumes that all features are independent
 class NaiveBayes:
     def fit(self, X, y):
         n_samples, n_features = X.shape
@@ -13,27 +15,32 @@ class NaiveBayes:
         self._priors = np.zeros(n_classes, dtype=np.float64)
 
         for idx, c in enumerate(self._classes):
-            X_c = X[y == c] # get all sampels of current class c
+            X_c = X[y == c] # get only features of current class
             self._mean[idx, :] = X_c.mean(axis=0) # mean of all features of class c
             self._var[idx, :] = X_c.var(axis=0) # variance of all features of class c
             self._priors[idx] = X_c.shape[0] / float(n_samples)
 
     def predict(self, X):
-        y_pred = [self._predict(x) for x in X]
+        y_pred = [self._predict(x) for x in X] # x = 1 sample
         return np.array(y_pred)
 
     def _predict(self, x):
+        # get the highest posterior (probability) of x in relation to all the classes
+        # basically find the class that is most likely of x
         posteriors = []
-        # calc posterior probability for each class
         for idx, c in enumerate(self._classes):
-            prior = np.log(self._priors[idx])
+            # this is the Bayes Theory equation implemented for this applcation
+            prior = np.log(self._priors[idx]) # frequency of each class
             posterior = np.sum(np.log(self._pdf(idx, x))) # posterior function
             posterior += prior
             posteriors.append(posterior)
 
-        return self._classes[np.argmax(posteriors)] # highest posterior probability
+        # highest posterior probability
+        return self._classes[np.argmax(posteriors)]
 
     def _pdf(self, idx, x):
+        # class conditional probability
+        # probability density function modeled Gaussian distribution implemented
         mean = self._mean[idx]
         var = self._var[idx]
         numerator = np.exp(-((x - mean) ** 2) / (2 * var))

@@ -1,5 +1,5 @@
 ## learn-ml
-This is a basic learning plan I'm working on to get up to speed on the basics of machine learning and
+This is a basic learning plan I'm working on to get myself up to speed on the basics of machine learning and
 understanding the fields ML, DL and other related topics for becoming an ML/Software Engineer. This
 guide will be a work in progress as I am learning along side finding the proper resources to learn
 from.
@@ -16,9 +16,9 @@ Know what [MNIST](https://en.wikipedia.org/wiki/MNIST_database) is.
 You can jump around within each step. I would advise to just skim the Stanford lectures if you understand
 how the previous topics work from implementing them.
 1. DSA
-    - [ ] Big-O notation
-    - [ ] Linked list (single and double)
-    - [ ] Stack/Queue
+    - [X] Big-O notation
+    - [X] Linked list (single and double)
+    - [X] Stack/Queue
     - [ ] Tree
     - [ ] Bubble sort
     - [ ] Hash table
@@ -37,15 +37,17 @@ how the previous topics work from implementing them.
         - [The kernel trick](https://www.youtube.com/watch?v=Q7vT0--5VII)
     - [X] K nearest neighbors (KNN)
         - [Video tutorial](https://www.youtube.com/watch?v=rTEtEy5o3X0)
-    - [ ] Naive Bayes
+    - [X] Naive Bayes
         - [Video tutorial](https://www.youtube.com/watch?v=TLInuAorxqE)
     - [ ] Decision tree
         - [Video tutorial](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
+        - [Video explanation](https://www.youtube.com/watch?v=LDRbO9a6XPU)
     - [ ] Random forest
     - [ ] Principal component analysis (PCA)
+        - [Video tutorial](https://www.youtube.com/watch?v=Rjr62b_h7S4)
     - [ ] K means clustering
         - [Video tutorial](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
-    - [ ] Perceptron
+    - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
 3. Stanford CS229 ML course on youtube until neural networks
     - [ ] [Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
@@ -84,8 +86,11 @@ how the previous topics work from implementing them.
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
 - [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-- [MNIST from scratch](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
+- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
 - [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+
+#### Personal todo
+- Learn how to fetch data in python
 
 ### Download the datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
