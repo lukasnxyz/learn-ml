@@ -13,22 +13,6 @@
 - Use more asserts!
 - Feed forward, weighted linear combination, activation, regularisation, loss function, back propagation, gradient decent
 - Always write an accompanying document report on a project once finished?
-- [Project structure](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-
-### Tutorials
-- [Stanford CS229 ML course](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
-- [Stanford coursea ml course](https://www.coursera.org/learn/machine-learning)
-- [NNs from zero to hero](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-- [NN from scatch in python/numpy](https://www.youtube.com/watch?v=w8yWXqWQYmU)
-- [MNIST classifier from scratch article](https://towardsdatascience.com/mnist-handwritten-digits-classification-from-scratch-using-python-numpy-b08e401c4dab)
-- [MNIST classifier from scratch](https://github.com/kdexd/digit-classifier)
-- [Need to know algos](https://gab41.lab41.org/the-10-algorithms-machine-learning-engineers-need-to-know-f4bb63f5b2fa#.ofc7t2965)
-- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-
-### Other Resources
-- [ML for programmers](https://machinelearningmastery.com/machine-learning-for-programmers/)
-- [How to learn on your own](https://metacademy.org/roadmaps/rgrosse/learn_on_your_own)
-- [The 100 Page Machine Learning Book](https://themlbook.com/)
 
 ### What is?
 - [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
@@ -62,30 +46,6 @@ Different tasks
 - Natural language processing (e.g.: text classification, sentiment analysis, language modeling, machine translation)
 - Recommending systems
 - Classic machine learning
-
-### Learning
-1. [DSA](https://frontendmasters.com/courses/algorithms/)
-2. ML Algorithms
-    - [X] [Linear regression](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
-    - [X] [Support vector machine (SVM)](https://www.youtube.com/watch?v=T9UcK-TxQGw)
-        - https://towardsdatascience.com/implement-multiclass-svm-from-scratch-in-python-b141e43dc084
-        - https://www.youtube.com/watch?v=Q7vT0--5VII
-        - https://stackoverflow.com/questions/62242579/implementing-svm-rbf
-    - [X] [Logisitc regression](https://www.youtube.com/watch?v=YYEJ_GUguHw)
-    - [X] [K nearest neighbors (KNN)](https://www.youtube.com/watch?v=rTEtEy5o3X0)
-    - [ ] [Naive Bayes](https://www.youtube.com/watch?v=TLInuAorxqE)
-    - [ ] [Decision tree](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
-    - [ ] Random forest
-    - [ ] Principal component analysis (PCA)
-    - [ ] [K means clustering](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
-    - [ ] [Perceptron](https://www.youtube.com/watch?v=aOEoxyA4uXU)
-3. Stanford CS229 ML course on youtube until neural networks
-4. Read The 100 ML Book until neural networks
-5. Project: MNIST classifier
-6. Learn basics of pytorch
-7. Perceptron and Feed Forward neural networks
-8. Convolutional and Recurrent neural networks
-9. Transformers
 
 ### Ideas I want to build
 - An ML library
