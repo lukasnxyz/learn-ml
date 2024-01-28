@@ -30,7 +30,7 @@ class SVM:
                 if condition:
                     self.weights -= self.lr * (2 * self.lam * self.weights)
                 else:
-                    self.weights -= self.lr * (2 * self.lam * self.weights - np.dot(x_i, y_[idx]))
+                    self.weight -= self.lr * (2 * self.lam * self.weights - np.dot(x_i, y_[idx]))
                     self.bias -= self.lr * y_[idx]
 
     def predict(self, X):

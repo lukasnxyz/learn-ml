@@ -73,7 +73,9 @@ how the previous topics work from implementing them.
     - [ ] [Lecture 19 Reward Model & Linear Dynamical System](https://www.youtube.com/watch?v=0rt2CsEQv6U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=19)
     - [ ] [Lecture 20 RL Debugging and Diagnostics](https://www.youtube.com/watch?v=pLhPQynL0tY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=20)
 8. Multilayer Perceptron/Feed Forward neural network
+    - [ ] Karpathy nn from scratch?
 9. Convolutional and Recurrent neural networks
+    - [ ] Karpathy nn from scratch?
 10. Finish The 100 Page Machine Learning Book from step 4
     - [ ] Neural Networks and Deep Learning
     - [ ] Problems and Solutions
@@ -82,14 +84,17 @@ how the previous topics work from implementing them.
     - [ ] Other Forms of Learning
 11. Projects:
     - [ ] MNIST classifier
+    - [ ] A language model?
 12. Transformers
 
 #### Other notes and useful links
-- [ ] [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-- [ ] [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [ ] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-- [ ] [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
-- [ ] [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
+- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
+- [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
+- [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
+- [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
 
 #### Personal projects
 - MNIST classifier from scratch

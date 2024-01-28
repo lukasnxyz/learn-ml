@@ -1,7 +1,6 @@
 import numpy as np
 import csv
 from tqdm import tqdm
-from sklearn.model_selection import train_test_split
 
 # a perceptron is the single unit if a neural network
 # also known as the prototype for neural networks
@@ -93,7 +92,9 @@ if __name__ == "__main__":
     y = data[:, -1]
     '''
 
+    from sklearn.model_selection import train_test_split
     from sklearn import datasets
+
     X, y = datasets.make_blobs(
             n_samples=3000, n_features=2, centers=2, cluster_std=1.05, random_state=2
     )
