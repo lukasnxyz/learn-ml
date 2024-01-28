@@ -1,9 +1,6 @@
 import numpy as np
 from tqdm import tqdm
 
-from scipy.spatial import distance # for Guassian kernel
-from scipy.interpolate import Rbf
-
 # note: can use something like
 #   @SVMClass
 #   def fit(self, X, y):

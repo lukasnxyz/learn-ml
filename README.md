@@ -16,16 +16,6 @@ Know what [MNIST](https://en.wikipedia.org/wiki/MNIST_database) is.
 You can jump around within each step. I would advise to just skim the Stanford lectures if you understand
 how the previous topics work from implementing them.
 1. DSA
-    - [X] Big-O notation
-    - [X] Linked list (single and double)
-    - [X] Stack/Queue
-    - [ ] Tree
-    - [ ] Bubble sort
-    - [ ] Hash table
-    - [ ] Quick sort
-    - [ ] Merge sort
-    - [ ] Linear search
-    - [ ] Binary search
 2. Fundamental ML algorithms from scratch
     - [X] Linear regression
         - [Video tutorial](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
@@ -45,7 +35,7 @@ how the previous topics work from implementing them.
     - [ ] Random forest
     - [ ] Principal component analysis (PCA)
         - [Video tutorial](https://www.youtube.com/watch?v=Rjr62b_h7S4)
-    - [ ] K means clustering
+    - [X] K means clustering
         - [Video tutorial](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
     - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
@@ -71,9 +61,19 @@ how the previous topics work from implementing them.
 6. Projects:
     - [ ] Random algo implement from scratch with math notes
     - [ ] MNIST classifier (both pytorch and from scratch if possible)
-7. Multilayer Perceptron/Feed Forward neural network
-8. Convolutional and Recurrent neural networks
-9. Stanford CS229 ML course on youtube neural networks until end
+7. Stanford CS229 ML course on youtube neural networks until end
+    - [ ] [Lecture 11 Introduction to Neural Networks](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
+    - [ ] [Lecture 12 Backprop & Improving Neural Networks](https://www.youtube.com/watch?v=zUazLXZZA2U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=12)
+    - [ ] [Lecture 13 Debugging ML Models and Error Analysis](https://www.youtube.com/watch?v=ORrStCArmP4&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=13)
+    - [ ] [Lecture 14 Expectation-Maximization Algorithms](https://www.youtube.com/watch?v=rVfZHWTwXSA&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=14)
+    - [ ] [Lecture 15 EM Algorithm & Factor Analysis](https://www.youtube.com/watch?v=tw6cmL5STuY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=15)
+    - [ ] [Lecture 16 Independent Component Analysis & RL](https://www.youtube.com/watch?v=YQA9lLdLig8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=16)
+    - [ ] [Lecture 17 MDPs & Value/Policy Iteration](https://www.youtube.com/watch?v=d5gaWTo6kDM&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=17)
+    - [ ] [Lecture 18 Continous State MDP & Model Simulation](https://www.youtube.com/watch?v=QFu5nuc-S0s&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=18)
+    - [ ] [Lecture 19 Reward Model & Linear Dynamical System](https://www.youtube.com/watch?v=0rt2CsEQv6U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=19)
+    - [ ] [Lecture 20 RL Debugging and Diagnostics](https://www.youtube.com/watch?v=pLhPQynL0tY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=20)
+8. Multilayer Perceptron/Feed Forward neural network
+9. Convolutional and Recurrent neural networks
 10. Finish The 100 Page Machine Learning Book from step 4
     - [ ] Neural Networks and Deep Learning
     - [ ] Problems and Solutions
@@ -85,14 +85,15 @@ how the previous topics work from implementing them.
 12. Transformers
 
 #### Other notes and useful links
-- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
-- [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [ ] [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
+- [ ] [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
+- [ ] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+- [ ] [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
+- [ ] [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 
-#### Personal todo
-- Learn how to fetch data in python
+#### Personal projects
+- MNIST classifier from scratch
+- Self driving Raspberry Pi car? (very basic with clear lines and such)
 
 ### Download the datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)

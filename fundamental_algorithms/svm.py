@@ -41,7 +41,7 @@ def accuracy(true, pred):
     accuracy = np.sum(true == pred) / len(true)
     return accuracy
 
-def main():
+if __name__ == "__main__":
     with open("../data/height-weight.csv", "r") as file:
         next(file)
         reader = csv.reader(file)
@@ -68,5 +68,3 @@ def main():
     a = accuracy(y_test, predictions) * 100
     print("Accuracy: " + "{:.2f}%".format(a))
 
-if __name__ == "__main__":
-    main()

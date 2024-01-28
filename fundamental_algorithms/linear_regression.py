@@ -22,6 +22,7 @@ def loss_function(m, b, points):
 
     return total_error
 
+# batch gradient decent
 def gradient_decent(m_now, b_now, points, rate): # rate is learning rate
     m_gradient = 0
     b_gradient = 0
