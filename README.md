@@ -62,6 +62,7 @@ how the previous topics work from implementing them.
     - [ ] Random algo implement from scratch with math notes
     - [ ] MNIST classifier (both pytorch and from scratch if possible)
 7. Multilayer Perceptron/Feed Forward neural network
+
     [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) an intro to NN's playlist.
     - [X] [1. Intro and Neuron Code](https://www.youtube.com/watch?v=Wo5dMEP_BbI&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=1&t=904s)
     - [X] [2. Coding a Layer](https://www.youtube.com/watch?v=lGLto9Xd7bU&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=2)
