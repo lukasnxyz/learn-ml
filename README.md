@@ -61,7 +61,19 @@ how the previous topics work from implementing them.
 6. Projects:
     - [ ] Random algo implement from scratch with math notes
     - [ ] MNIST classifier (both pytorch and from scratch if possible)
-7. Stanford CS229 ML course on youtube neural networks until end
+7. Multilayer Perceptron/Feed Forward neural network
+    [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) an intro to NN's playlist.
+    - [X] [1. Intro and Neuron Code](https://www.youtube.com/watch?v=Wo5dMEP_BbI&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=1&t=904s)
+    - [X] [2. Coding a Layer](https://www.youtube.com/watch?v=lGLto9Xd7bU&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=2)
+    - [X] [3. The Dot Product](https://www.youtube.com/watch?v=tMrbN67U9d4&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=3)
+    - [X] [4. Batches, Layers, and Objects](https://www.youtube.com/watch?v=TEWy9vZcxW4&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=4)
+    - [ ] [5. Hidden Layer Activation Functions](https://www.youtube.com/watch?v=gmjzbpSVY1A&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=5)
+    - [ ] [6. Softmax Activation](https://www.youtube.com/watch?v=omz_NdFgWyU&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=6)
+    - [ ] [7. Calculating Loss with Categorical Cross-Entropy](https://www.youtube.com/watch?v=dEXPMQXoiLc&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=7)
+    - [ ] [8. Implementing Loss](https://www.youtube.com/watch?v=levekYbxauw&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=8)
+    - [ ] [9. Introducing Optimization and derivatives](https://www.youtube.com/watch?v=txh3TQDwP1g&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=9)
+8. Convolutional and Recurrent neural networks
+9. Stanford CS229 ML course on youtube neural networks until end
     - [ ] [Lecture 11 Introduction to Neural Networks](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
     - [ ] [Lecture 12 Backprop & Improving Neural Networks](https://www.youtube.com/watch?v=zUazLXZZA2U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=12)
     - [ ] [Lecture 13 Debugging ML Models and Error Analysis](https://www.youtube.com/watch?v=ORrStCArmP4&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=13)
@@ -72,10 +84,6 @@ how the previous topics work from implementing them.
     - [ ] [Lecture 18 Continous State MDP & Model Simulation](https://www.youtube.com/watch?v=QFu5nuc-S0s&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=18)
     - [ ] [Lecture 19 Reward Model & Linear Dynamical System](https://www.youtube.com/watch?v=0rt2CsEQv6U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=19)
     - [ ] [Lecture 20 RL Debugging and Diagnostics](https://www.youtube.com/watch?v=pLhPQynL0tY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=20)
-8. Multilayer Perceptron/Feed Forward neural network
-    - [ ] Karpathy nn from scratch?
-9. Convolutional and Recurrent neural networks
-    - [ ] Karpathy nn from scratch?
 10. Finish The 100 Page Machine Learning Book from step 4
     - [ ] Neural Networks and Deep Learning
     - [ ] Problems and Solutions
@@ -88,17 +96,13 @@ how the previous topics work from implementing them.
 12. Transformers
 
 #### Other notes and useful links
-- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
-- [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-- [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
-- [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
-
-#### Personal projects
-- MNIST classifier from scratch
-- Self driving Raspberry Pi car? (very basic with clear lines and such)
+- [ ] [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
+- [ ] [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
+- [ ] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+- [ ] [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
+- [ ] [NN from scratch Karpathy](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+- [ ] [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
+- [ ] [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
 
 ### Download the datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
