@@ -111,4 +111,5 @@ how the previous topics work from implementing them.
 - [Height weight](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 - [Water quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 - [Iris dataset](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
+- [Diabetes](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
 - [Other data](https://github.com/Avik-Jain/100-Days-Of-ML-Code/tree/master/datasets)
