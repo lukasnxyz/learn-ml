@@ -16,26 +16,29 @@ def spiral_data(points, classes):
         y[ix] = class_number
     return X, y
 
-class NN:
-    def __init__(self):
-        pass
+def relu(x):
+    return np.max(0, x)
 
-    def forward(self):
-        pass
+def sigmoid(x):
+    return 1 / (1 - np.exp(-x))
 
-    def backward(self):
-        pass
-
-    def predict(self):
-        pass
-
-class Layer_Dense:
+class Layer:
     def __init__(self, n_inputs, n_neurons):
-        self.weights = 0.1 * np.random.randn(n_inputs, n_neurons)
+        self.weights = 0.1 * np.random.randn(n_input, n_neurons)
         self.biases = np.zeros((1, n_neurons))
 
     def forward(self, X):
         self.output = np.dot(X, self.weights) + self.biases
+
+class NN:
+    def __init__(self, af=relu):
+        pass
+
+    def forward(self, X):
+        pass
+
+    def backward(self):
+        pass
 
 class Activation_Relu:
     def forward(self, inputs):
@@ -46,8 +49,6 @@ class Activation_Softmax: # softmax is used in last layer to predict class
         exp_values = np.exp(inputs - np.max(inputs, axis=1, keepdims=True))
         probabilities = exp_values / np.sum(exp_values, axis=1, keepdims=True)
         self.output = probabilities
-
-# activation functions: unit step, relu, sigmoid
 
 class Loss:
     def calculate(self, output, y):
