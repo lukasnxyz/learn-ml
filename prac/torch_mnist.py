@@ -10,17 +10,16 @@ def accuracy(pred, true):
 class MNIST(nn.Module):
     def __init__(self):
         super().__init__()
-        # 2 hidden layers
         self.h1 = nn.Linear(784, 128) # 784 features = 28 * 28 image
         self.act1 = nn.ReLU()
-        #self.h2 = nn.Linear(128, 128)
-        #self.act2 = nn.ReLU()
+        self.h2 = nn.Linear(128, 128)
+        self.act2 = nn.ReLU()
         self.output = nn.Linear(128, 10)
         self.act_output = nn.Sigmoid()
 
     def forward(self, X):
         X = self.act1(self.h1(X))
-        #X = self.act2(self.h2(X))
+        X = self.act2(self.h2(X))
         X = self.act_output(self.output(X))
 
         return X
@@ -64,10 +63,11 @@ if __name__ == "__main__":
         val = pred.argmax()
         preds.append(val)
 
-    a = accuracy(preds, Y_test)
-    print(f"Accuracy: {a}")
+    a = accuracy(preds, Y_test) * 100
+    print(f"Accuracy: %.2f%%" % (a))
 
     # graphing to show
+    '''
     import matplotlib.pyplot as plt
     for _ in range(7):
         i = np.random.randint(len(preds))
@@ -75,3 +75,4 @@ if __name__ == "__main__":
         plt.imshow(X_test[i].reshape(28, 28))
         plt.title(f"Prediction: {preds[i]}")
         plt.show()
+    '''

@@ -60,7 +60,7 @@ how the previous topics work from implementing them.
 5. Learn basics of pytorch (or any other popular ML library)
 6. Projects:
     - [ ] Random algo implement from scratch with math notes
-    - [ ] MNIST classifier (both pytorch and from scratch if possible)
+    - [X] MNIST classifier (using pytorch)
 7. Multilayer Perceptron/Feed Forward neural network
 
     [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) a good intro to NN's playlist. Warning: it's not a complete guide!
@@ -92,7 +92,7 @@ how the previous topics work from implementing them.
     - [ ] Unsupervised Learning
     - [ ] Other Forms of Learning
 11. Projects:
-    - [ ] MNIST classifier
+    - [ ] MNIST classifier (from scratch nn)
     - [ ] A language model?
 12. Transformers
 
