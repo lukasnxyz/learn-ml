@@ -48,6 +48,8 @@ if __name__ == "__main__":
             y_pred = model(Xbatch)
             ybatch = y[i:i+batch_size]
 
+            print("pred:", y_pred.shape)
+            print("batch:", ybatch.shape)
             loss = loss_fn(y_pred, ybatch)
             optimizer.zero_grad()
             loss.backward()
