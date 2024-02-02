@@ -67,6 +67,7 @@ if __name__ == "__main__":
     print(f"Accuracy: %.2f%%" % (a))
 
     # graphing to show
+
     '''
     import matplotlib.pyplot as plt
     for _ in range(7):

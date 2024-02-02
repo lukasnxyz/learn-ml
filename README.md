@@ -92,7 +92,7 @@ how the previous topics work from implementing them.
     - [ ] Unsupervised Learning
     - [ ] Other Forms of Learning
 11. Projects:
-    - [ ] MNIST classifier (from scratch nn)
+    - [ ] MNIST classifier from scratch
     - [ ] A language model?
 12. Transformers
 
