@@ -1,16 +1,5 @@
 import numpy as np
-
-# for random practice dataset
-def spiral_data(points, classes):
-    X = np.zeros((points*classes, 2))
-    y = np.zeros(points*classes, dtype='uint8')
-    for class_number in range(classes):
-        ix = range(points*class_number, points*(class_number+1))
-        r = np.linspace(0.0, 1, points)  # radius
-        t = np.linspace(class_number*4, (class_number+1)*4, points) + np.random.randn(points)*0.2
-        X[ix] = np.c_[r*np.sin(t*2.5), r*np.cos(t*2.5)]
-        y[ix] = class_number
-    return X, y
+from tqdm import trange
 
 def accuracy(pred, true):
     return np.sum(pred == true) / len(true)
@@ -38,6 +27,8 @@ class Loss:
         sample_losses = self.forward(output, y)
         data_loss = np.mean(sample_losses)
 
+        return data_loss
+
 class Loss_CatergoricalCrossentropy(Loss):
     def forward(self, y_pred, y_true):
         samples = len(y_pred)
@@ -52,30 +43,78 @@ class Loss_CatergoricalCrossentropy(Loss):
 
         return negative_log_likelihoods
 
+    #def backward(self):
+
 class NN:
     def __init__(self):
-        self.h1 = Layer_Dense(2, 3)
-        self.act1 = Activation_Relu()
-        self.h2 = Layer_Dense(3, 3)
-        self.act2 = Activation_Relu()
-        self.output = Activation_Output
+        # 1 hidden layer
+        self.h1 = Layer_Dense(784, 128)
+        self.a1 = Activation_Relu()
+        self.h2 = Layer_Dense(128, 128)
+        self.a2 = Activation_Softmax()
 
     def forward(self, X):
-        X = self.act1(self.h1(X))
-        X = self.act2(self.h2(X))
-        X = self.output(self.output(X))
+        self.h1.forward(X)
+        self.a1.forward(self.h1.output)
+        self.h2.forward(self.a1.output)
+        self.a2.forward(self.h2.output)
 
-        return X
+        return self.a2.output
+
+# stochastic gradient descent
+class Adam:
+    def __init__(self, bt1=0.9, bt2=0.999, eps=10e-8, lr=1e-3):
+        self.lr = lr
+        self.m_dw, self.v_dw = 0, 0
+        self.m_db, self.v_db = 0, 0
+        self.bt1 = bt1
+        self.bt2 = bt2
+        self.eps = eps
+
+    def zero_grad(self):
+        self.m_dw, self.v_dw = 0, 0
+        self.m_db, self.v_db = 0, 0
+
+    def step(self, w, b, dw, db):
+        self.m_dw = self.b1*self.m_dw + (1 - self.bt1)*dw
+        self.m_db = self.bt1*self.m_db + (1 - self.bt1)*db
+
+        self.v_dw = self.beta2*self.v_dw + (1-self.beta2)*(dw**2)
+        self.v_db = self.beta2*self.v_db + (1-self.beta2)*(db)
+
+        m_dw_corr = self.m_dw/(1-self.beta1**t)
+        m_db_corr = self.m_db/(1-self.beta1**t)
+        v_dw_corr = self.v_dw/(1-self.beta2**t)
+        v_db_corr = self.v_db/(1-self.beta2**t)
+
+        w = w - self.eta*(m_dw_corr/(np.sqrt(v_dw_corr)+self.epsilon))
+        b = b - self.eta*(m_db_corr/(np.sqrt(v_db_corr)+self.epsilon))
+
+        return w, b
 
 if __name__ == "__main__":
-    X, y = spiral_data(points=100, classes=3)
+    from keras.datasets import mnist
+    (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
+
+    X_train = X_train.reshape(X_train.shape[0], -1)
+    X_test = X_test.reshape(X_test.shape[0], -1)
 
     model = NN()
     loss_fn = Loss_CatergoricalCrossentropy()
-    #optimzer = Adam()
+    optimizer = Adam(lr=1e-4)
 
-    epochs = 100
-    #batch_size = 32
+    epochs = 2
+    batch_size = 5
 
-    # train for loop
-    # make predictions
+    for epoch in (t := trange(epochs)):
+        for i in range(0, len(X_train), batch_size):
+            X_batch = X_train[i:i+batch_size]
+            Y_batch = Y_train[i:i+batch_size]
+
+            out = model.forward(X_batch)
+            #optimizer.zero_grad()
+            loss = loss_fn.calculate(out, Y_batch)
+            #loss.backward()
+            #optimizer.step()
+
+        t.set_description("loss %.2f" % (loss))
