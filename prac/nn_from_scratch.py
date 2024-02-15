@@ -29,6 +29,7 @@ class Loss:
 
         return data_loss
 
+# generally calculates the difference from actual and predicted value
 class Loss_CatergoricalCrossentropy(Loss):
     def forward(self, y_pred, y_true):
         samples = len(y_pred)
@@ -43,24 +44,11 @@ class Loss_CatergoricalCrossentropy(Loss):
 
         return negative_log_likelihoods
 
+    # the backward pass is suppoed to provide gradients that are then subtracted from the weights
+    #   to provide a direction in which to shift them model (towards the correct answer).
     #def backward(self):
 
-class NN:
-    def __init__(self):
-        # 1 hidden layer
-        self.h1 = Layer_Dense(784, 128)
-        self.a1 = Activation_Relu()
-        self.h2 = Layer_Dense(128, 128)
-        self.a2 = Activation_Softmax()
-
-    def forward(self, X):
-        self.h1.forward(X)
-        self.a1.forward(self.h1.output)
-        self.h2.forward(self.a1.output)
-        self.a2.forward(self.h2.output)
-
-        return self.a2.output
-
+'''
 # stochastic gradient descent
 class Adam:
     def __init__(self, bt1=0.9, bt2=0.999, eps=10e-8, lr=1e-3):
@@ -91,6 +79,23 @@ class Adam:
         b = b - self.eta*(m_db_corr/(np.sqrt(v_db_corr)+self.epsilon))
 
         return w, b
+'''
+
+class NN:
+    def __init__(self):
+        # 1 hidden layer
+        self.h1 = Layer_Dense(784, 128)
+        self.a1 = Activation_Relu()
+        self.h2 = Layer_Dense(128, 128)
+        self.a2 = Activation_Softmax()
+
+    def forward(self, X):
+        self.h1.forward(X)
+        self.a1.forward(self.h1.output)
+        self.h2.forward(self.a1.output)
+        self.a2.forward(self.h2.output)
+
+        return self.a2.output
 
 if __name__ == "__main__":
     from keras.datasets import mnist
@@ -101,7 +106,7 @@ if __name__ == "__main__":
 
     model = NN()
     loss_fn = Loss_CatergoricalCrossentropy()
-    optimizer = Adam(lr=1e-4)
+    #optimizer = Adam(lr=1e-4)
 
     epochs = 2
     batch_size = 5

@@ -62,19 +62,10 @@ how the previous topics work from implementing them.
     - [ ] Random algo implement from scratch with math notes
     - [X] MNIST classifier (using pytorch)
 7. Multilayer Perceptron/Feed Forward neural network
-
-    [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) a good intro to NN's playlist. Warning: it's not a complete guide!
-    - [X] [1. Intro and Neuron Code](https://www.youtube.com/watch?v=Wo5dMEP_BbI&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=1&t=904s)
-    - [X] [2. Coding a Layer](https://www.youtube.com/watch?v=lGLto9Xd7bU&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=2)
-    - [X] [3. The Dot Product](https://www.youtube.com/watch?v=tMrbN67U9d4&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=3)
-    - [X] [4. Batches, Layers, and Objects](https://www.youtube.com/watch?v=TEWy9vZcxW4&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=4)
-    - [X] [5. Hidden Layer Activation Functions](https://www.youtube.com/watch?v=gmjzbpSVY1A&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=5)
-    - [X] [6. Softmax Activation](https://www.youtube.com/watch?v=omz_NdFgWyU&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=6)
-    - [X] [7. Calculating Loss with Categorical Cross-Entropy](https://www.youtube.com/watch?v=dEXPMQXoiLc&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=7)
-    - [X] [8. Implementing Loss](https://www.youtube.com/watch?v=levekYbxauw&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=8)
-    - [X] [9. Introducing Optimization and derivatives](https://www.youtube.com/watch?v=txh3TQDwP1g&list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3&index=9)
-8. Convolutional and Recurrent neural networks
+    - [X] [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) a good intro to NN's playlist. Warning: it's not a complete guide!
+    - [Training a classifier with softmax cross entropy loss](https://douglasorr.github.io/2021-10-training-objectives/1-xent/article.html#mjx-eqn-eqn%3Aloss)
     - [ ] [NN from scratch Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+8. Convolutional and Recurrent neural networks
 9. Stanford CS229 ML course on youtube neural networks until end
     - [ ] [Lecture 11 Introduction to Neural Networks](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
     - [ ] [Lecture 12 Backprop & Improving Neural Networks](https://www.youtube.com/watch?v=zUazLXZZA2U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=12)
@@ -100,7 +91,7 @@ how the previous topics work from implementing them.
 #### Other notes and useful links
 - [ ] [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
 - [ ] [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [ ] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+- [X] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
 - [ ] [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
 - [ ] [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
 - [ ] [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
