@@ -22,32 +22,6 @@ class Activation_Softmax:
         probs = exp_values / np.sum(exp_values, axis=1, keepdims=True)
         self.output = probs
 
-class Loss:
-    def calculate(self, output, y):
-        sample_losses = self.forward(output, y)
-        data_loss = np.mean(sample_losses)
-
-        return data_loss
-
-# generally calculates the difference from actual and predicted value
-class Loss_CatergoricalCrossentropy(Loss):
-    def forward(self, y_pred, y_true):
-        samples = len(y_pred)
-        y_pred_clipped = np.clip(y_pred, 1e-7, 1 - 1e-7)
-
-        if len(y_true.shape) == 1: # mean scalar value were passed
-            correct_confidences = y_pred_clipped[range(samples), y_true]
-        elif len(y_true.shape) == 2:
-            correct_confidences = np.sum(y_pred_clipped * y_true, axis=1)
-
-        negative_log_likelihoods = -np.log(correct_confidences)
-
-        return negative_log_likelihoods
-
-    # the backward pass is suppoed to provide gradients that are then subtracted from the weights
-    #   to provide a direction in which to shift them model (towards the correct answer).
-    #def backward(self):
-
 '''
 # stochastic gradient descent
 class Adam:
@@ -80,6 +54,32 @@ class Adam:
 
         return w, b
 '''
+
+class Loss:
+    def calculate(self, output, y):
+        sample_losses = self.forward(output, y)
+        data_loss = np.mean(sample_losses)
+
+        return data_loss
+
+# generally calculates the difference from actual and predicted value
+class Loss_CatergoricalCrossentropy(Loss):
+    def forward(self, y_pred, y_true):
+        samples = len(y_pred)
+        y_pred_clipped = np.clip(y_pred, 1e-7, 1 - 1e-7)
+
+        if len(y_true.shape) == 1: # mean scalar value were passed
+            correct_confidences = y_pred_clipped[range(samples), y_true]
+        elif len(y_true.shape) == 2:
+            correct_confidences = np.sum(y_pred_clipped * y_true, axis=1)
+
+        negative_log_likelihoods = -np.log(correct_confidences)
+
+        return negative_log_likelihoods
+
+    # the backward pass is suppoed to provide gradients that are then subtracted from the weights
+    #   to provide a direction in which to shift them model (towards the correct answer).
+    #def backward(self):
 
 class NN:
     def __init__(self):
