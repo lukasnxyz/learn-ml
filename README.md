@@ -89,12 +89,13 @@ how the previous topics work from implementing them.
 12. Transformers
 
 #### Other notes and useful links
-- [ ] [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-- [ ] [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [X] [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
-- [ ] [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
-- [ ] [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
-- [ ] [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
+- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
+- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
+- [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
+- [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
+- [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
+- [MNIST classifier using Pytorch (my own article)](https://lukasn.xyz/posts/neural-network-model-basics/)
 
 ### Download the datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)

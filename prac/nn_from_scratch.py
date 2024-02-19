@@ -64,6 +64,7 @@ class Loss:
 
 # generally calculates the difference from actual and predicted value
 class Loss_CatergoricalCrossentropy(Loss):
+    # forward pass simply gets the loss of the entire model
     def forward(self, y_pred, y_true):
         samples = len(y_pred)
         y_pred_clipped = np.clip(y_pred, 1e-7, 1 - 1e-7)
@@ -77,8 +78,8 @@ class Loss_CatergoricalCrossentropy(Loss):
 
         return negative_log_likelihoods
 
-    # the backward pass is suppoed to provide gradients that are then subtracted from the weights
-    #   to provide a direction in which to shift them model (towards the correct answer).
+    # the backward pass of the loss function gives each neuron in the model a gradient
+    #   that the optimzer can then use to tune each neuron in the right direction
     #def backward(self):
 
 class NN:
