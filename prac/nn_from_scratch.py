@@ -34,6 +34,7 @@ class Adam:
         self.eps = eps
 
     def zero_grad(self):
+        # this is also wrong! need to zero they gradients on all the neurons!
         self.m_dw, self.v_dw = 0, 0
         self.m_db, self.v_db = 0, 0
 
