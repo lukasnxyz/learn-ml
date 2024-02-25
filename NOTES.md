@@ -13,6 +13,7 @@
 - Use more asserts!
 - Feed forward, weighted linear combination, activation, regularisation, loss function, back propagation, gradient decent
 - Always write an accompanying document report on a project once finished?
+- To train llama 2 70b and you would need about 6000 gpus and 12 days of training
 
 ### What is?
 - [Convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
