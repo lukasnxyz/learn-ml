@@ -22,8 +22,8 @@ class Activation_Softmax:
         probs = exp_values / np.sum(exp_values, axis=1, keepdims=True)
         self.output = probs
 
-'''
 # stochastic gradient descent
+'''
 class Adam:
     def __init__(self, bt1=0.9, bt2=0.999, eps=10e-8, lr=1e-3):
         self.lr = lr

@@ -41,16 +41,7 @@ how the previous topics work from implementing them.
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
         - [A Little About Perceptrons and Activation Functions](https://medium.com/mlearning-ai/a-little-about-perceptrons-and-activation-functions-aed19d672656)
 3. Stanford CS229 ML course on youtube until neural networks
-    - [X] [Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
-    - [X] [Lecture 2 - Linear Regression and Gradient Descent](https://www.youtube.com/watch?v=4b4MUYve_U8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=2)
-    - [ ] [Lecture 3 - Logistic Regression](https://www.youtube.com/watch?v=het9HFqo1TQ&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=3)
-    - [ ] [Lecture 4 - Perceptron](https://www.youtube.com/watch?v=iZTeva0WSTQ&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=4)
-    - [ ] [Lecture 5 - GDA & Naive Bayes](https://www.youtube.com/watch?v=nt63k3bfXS0&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=5)
-    - [ ] [Lecture 6 - Support Vector Machines](https://www.youtube.com/watch?v=lDwow4aOrtg&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=6)
-    - [ ] [Lecture 7 - Kernels](https://www.youtube.com/watch?v=8NYoQiRANpg&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=7)
-    - [ ] [Lecture 8 - Models & Cross-Validation](https://www.youtube.com/watch?v=rjbkWSTjHzM&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=8)
-    - [ ] [Lecture 9 - Estimation Error](https://www.youtube.com/watch?v=iVOxMcumR4A&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=9)
-    - [ ] [Lecture 10 - Decision Trees](https://www.youtube.com/watch?v=wr9gUr-eWdA&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=10)
+    - [X] [Lecture 1 - 10](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
 4. Read [The 100 Page Machine Learning Book](https://themlbook.com/) until the neural networks chapter
     - [ ] Introduction
     - [ ] Notation and Definitions
@@ -67,16 +58,7 @@ how the previous topics work from implementing them.
     - [ ] [NN from scratch Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 8. Convolutional and Recurrent neural networks
 9. Stanford CS229 ML course on youtube neural networks until end
-    - [ ] [Lecture 11 Introduction to Neural Networks](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
-    - [ ] [Lecture 12 Backprop & Improving Neural Networks](https://www.youtube.com/watch?v=zUazLXZZA2U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=12)
-    - [ ] [Lecture 13 Debugging ML Models and Error Analysis](https://www.youtube.com/watch?v=ORrStCArmP4&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=13)
-    - [ ] [Lecture 14 Expectation-Maximization Algorithms](https://www.youtube.com/watch?v=rVfZHWTwXSA&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=14)
-    - [ ] [Lecture 15 EM Algorithm & Factor Analysis](https://www.youtube.com/watch?v=tw6cmL5STuY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=15)
-    - [ ] [Lecture 16 Independent Component Analysis & RL](https://www.youtube.com/watch?v=YQA9lLdLig8&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=16)
-    - [ ] [Lecture 17 MDPs & Value/Policy Iteration](https://www.youtube.com/watch?v=d5gaWTo6kDM&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=17)
-    - [ ] [Lecture 18 Continous State MDP & Model Simulation](https://www.youtube.com/watch?v=QFu5nuc-S0s&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=18)
-    - [ ] [Lecture 19 Reward Model & Linear Dynamical System](https://www.youtube.com/watch?v=0rt2CsEQv6U&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=19)
-    - [ ] [Lecture 20 RL Debugging and Diagnostics](https://www.youtube.com/watch?v=pLhPQynL0tY&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=20)
+    - [ ] [Lecture 11-20](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
 10. Finish The 100 Page Machine Learning Book from step 4
     - [ ] Neural Networks and Deep Learning
     - [ ] Problems and Solutions
