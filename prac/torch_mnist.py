@@ -44,12 +44,16 @@ if __name__ == "__main__":
 
     for epoch in (t := trange(epochs)):
         for i in range(0, len(X_train), batch_size):
+            # batching
             X_batch = X_train[i:i+batch_size]
             Y_batch = Y_train[i:i+batch_size]
 
+            # forward pass
             out = model(X_batch)
             optimizer.zero_grad()
             loss = loss_fn(out, Y_batch)
+
+            # backward pass
             loss.backward()
             optimizer.step()
 
