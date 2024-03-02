@@ -43,11 +43,6 @@ how the previous topics work from implementing them.
 3. Stanford CS229 ML course on youtube until neural networks
     - [X] [Lecture 1 - 10](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
 4. Read [The 100 Page Machine Learning Book](https://themlbook.com/) until the neural networks chapter
-    - [ ] Introduction
-    - [ ] Notation and Definitions
-    - [ ] Fundamental Algorithms
-    - [ ] Anatomy of a Learning Algorithm
-    - [ ] Basic Practice
 5. Learn basics of pytorch (or any other popular ML library)
 6. Projects:
     - [ ] Random algo implement from scratch with math notes
@@ -62,11 +57,6 @@ how the previous topics work from implementing them.
 9. Stanford CS229 ML course on youtube neural networks until end
     - [ ] [Lecture 11-20](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
 10. Finish The 100 Page Machine Learning Book from step 4
-    - [ ] Neural Networks and Deep Learning
-    - [ ] Problems and Solutions
-    - [ ] Advanced Practice
-    - [ ] Unsupervised Learning
-    - [ ] Other Forms of Learning
 11. Projects:
     - [ ] MNIST classifier from scratch
     - [ ] A language model?
