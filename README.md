@@ -57,6 +57,8 @@ how the previous topics work from implementing them.
     - [Training a classifier with softmax cross entropy loss](https://douglasorr.github.io/2021-10-training-objectives/1-xent/article.html#mjx-eqn-eqn%3Aloss)
     - [X] [NN from scratch Karpathy (basically implement working MLP](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
 8. Convolutional and Recurrent neural networks
+    - [ ] [Karpathy on nn's at stanford CS231n](https://www.youtube.com/watch?v=i94OvYb6noo)
+    - [ ] [Included practice to CS231n](https://cs231n.github.io/)
 9. Stanford CS229 ML course on youtube neural networks until end
     - [ ] [Lecture 11-20](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
 10. Finish The 100 Page Machine Learning Book from step 4
