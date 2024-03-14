@@ -24,7 +24,7 @@ class MNIST(nn.Module):
 
         return X
 
-if __name__ == "__main__":
+def main():
     from keras.datasets import mnist
     (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
 
@@ -50,8 +50,12 @@ if __name__ == "__main__":
 
             # forward pass
             out = model(X_batch)
+            print("forward:", out)
+            print("Y_batch:", Y_batch)
             optimizer.zero_grad()
             loss = loss_fn(out, Y_batch)
+            print(loss)
+            return
 
             # backward pass
             loss.backward()
@@ -81,3 +85,6 @@ if __name__ == "__main__":
         plt.title(f"Prediction: {preds[i]}")
         plt.show()
     '''
+
+if __name__ == "__main__":
+    main()
