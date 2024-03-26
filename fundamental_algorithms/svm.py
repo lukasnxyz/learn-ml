@@ -67,4 +67,3 @@ if __name__ == "__main__":
 
     a = accuracy(y_test, predictions) * 100
     print("Accuracy: " + "{:.2f}%".format(a))
-

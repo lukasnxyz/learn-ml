@@ -1,5 +1,5 @@
 import numpy as np
-import torch
+#import torch
 import torch.nn as nn
 import torch.optim as optim
 from tqdm import trange
@@ -7,10 +7,10 @@ from tqdm import trange
 def accuracy(pred, true):
 	return np.sum(pred == true) / len(true)
 
-class MNIST(nn.Module):
+class CLASS(nn.Module):
 	def __init__(self):
 		super().__init__()
-		self.h1 = nn.Linear(784, 128) # 784 features = 28 * 28 image
+		self.h1 = nn.Linear(784, 128)
 		self.act1 = nn.ReLU()
 		self.h2 = nn.Linear(128, 128)
 		self.act2 = nn.ReLU()
@@ -25,22 +25,36 @@ class MNIST(nn.Module):
 		return X
 
 def main():
-	from keras.datasets import mnist
-	(X_train, Y_train), (X_test, Y_test) = mnist.load_data()
+	import pandas as pd
+	from sklearn.model_selection import train_test_split
 
-	X_train = X_train.reshape(X_train.shape[0], -1)
-	X_test = X_test.reshape(X_test.shape[0], -1)
+	td = pd.read_csv("train.csv")
+	td = np.array(td)
+	y = td[ :,1]
+	X = td[ :2,]
+
+	print(len(y))
+	print(X)
+	return
+
+	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+
+
+
+
+	#X_train = X_train.reshape(X_train.shape[0], -1)
+	#X_test = X_test.reshape(X_test.shape[0], -1)
 
 	X_train = torch.tensor(X_train, dtype=torch.float32)
 	X_test = torch.tensor(X_test, dtype=torch.float32)
 	Y_train = torch.tensor(Y_train, dtype=torch.long)
 
-	model = MNIST()
+	model = CLASS()
 	loss_fn = nn.CrossEntropyLoss()
 	optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
 	epochs = 100
-	batch_size = 32
+	batch_size = 100
 
 	for epoch in (t := trange(epochs)):
 		for i in range(0, len(X_train), batch_size):
@@ -69,18 +83,6 @@ def main():
 
 	a = accuracy(preds, Y_test) * 100
 	print(f"Accuracy: %.2f%%" % (a))
-
-	# graphing to show
-
-	'''
-	import matplotlib.pyplot as plt
-	for _ in range(7):
-		i = np.random.randint(len(preds))
-		print(f"true: {Y_test[i]} predicted: {preds[i]}")
-		plt.imshow(X_test[i].reshape(28, 28))
-		plt.title(f"Prediction: {preds[i]}")
-		plt.show()
-	'''
 
 if __name__ == "__main__":
 	main()
