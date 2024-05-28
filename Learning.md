@@ -22,6 +22,7 @@ related to machine/deep learning, but also just general programming things.
         * [ ] [Karpathy Stanford Lectures CS231n](https://www.youtube.com/watch?v=i94OvYb6noo)
     * [Included practice](https://cs231n.github.io/)
     * [ ] [Karpathy Makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
+    * [ ] [Learning Pytorch](https://www.learnpytorch.io/01_pytorch_workflow/)
 
 * Useful resources
     * [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
