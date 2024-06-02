@@ -50,7 +50,7 @@ def main():
 
 			# forward pass
 			out = model(X_batch)
-			optimizer.zero_grad()
+            optimizer.zero_grad()
 			loss = loss_fn(out, Y_batch)
 
 			# backward pass
