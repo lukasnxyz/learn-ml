@@ -1,3 +1,4 @@
+%%writefile going_modular/train.py
 """
 Trains a PyTorch image classification model using device-agnostic code.
 """
@@ -23,24 +24,24 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Create transforms
 data_transform = transforms.Compose([
-  transforms.Resize((64, 64)),
-  transforms.ToTensor()
-])
+    transforms.Resize((64, 64)),
+    transforms.ToTensor()
+    ])
 
 # Create DataLoaders with help from data_setup.py
 train_dataloader, test_dataloader, class_names = data_setup.create_dataloaders(
-    train_dir=train_dir,
-    test_dir=test_dir,
-    transform=data_transform,
-    batch_size=BATCH_SIZE
-)
+        train_dir=train_dir,
+        test_dir=test_dir,
+        transform=data_transform,
+        batch_size=BATCH_SIZE
+        )
 
 # Create model with help from model_builder.py
 model = model_builder.TinyVGG(
-    input_shape=3,
-    hidden_units=HIDDEN_UNITS,
-    output_shape=len(class_names)
-).to(device)
+        input_shape=3,
+        hidden_units=HIDDEN_UNITS,
+        output_shape=len(class_names)
+        ).to(device)
 
 # Set loss and optimizer
 loss_fn = torch.nn.CrossEntropyLoss()
