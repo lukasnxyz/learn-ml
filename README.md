@@ -42,40 +42,37 @@ how the previous topics work from implementing them.
         - [A Little About Perceptrons and Activation Functions](https://medium.com/mlearning-ai/a-little-about-perceptrons-and-activation-functions-aed19d672656)
 3. Stanford CS229 ML course on youtube until neural networks
     - [X] [Lecture 1 - 10](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
-4. Read [The 100 Page Machine Learning Book](https://themlbook.com/) until the neural networks chapter
-5. Learn basics of pytorch (or any other popular ML library)
-6. Projects:
-    - [ ] Random algo implement from scratch with math notes
+4. [X] Learn basics of pytorch (or any other popular ML library)
+5. Projects:
+    - [X] Random algo implement from scratch with math notes
     - [X] MNIST classifier (using pytorch)
-7. Multilayer Perceptron/Feed Forward neural network
+6. Multilayer Perceptron/Feed Forward neural network
     - [X] [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) a good intro to NN's playlist. Warning: it's not a complete guide!
     - [Training a classifier with softmax cross entropy loss](https://douglasorr.github.io/2021-10-training-objectives/1-xent/article.html#mjx-eqn-eqn%3Aloss)
     - [X] [NN from scratch Karpathy (basically implement working MLP](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-8. Convolutional and Recurrent neural networks
-    - [ ] [Karpathy on nn's at stanford CS231n](https://www.youtube.com/watch?v=i94OvYb6noo)
-    - [ ] [Included practice to CS231n](https://cs231n.github.io/)
-9. Stanford CS229 ML course on youtube neural networks until end
+7. Karpathy Zero-To-Hero Series
+    - [X] [Micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+    - [X] [Makemore: pt1](https://www.youtube.com/watch?v=PaCmpygFfXo&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=2)
+    - [X] [Makemore: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=3)
+    - [X] [Makemore: Activations and Gradients](https://www.youtube.com/watch?v=P6sfmUTpUmc&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=4)
+    - [X] [Makemore: Backprop](https://www.youtube.com/watch?v=q8SA3rM6ckI&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=5)
+    - [X] [Makemore: WaveNet](https://www.youtube.com/watch?v=t3YJ5hKiMQ0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=6)
+    - [X] [GPT From Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=7)
+8. Stanford CS229 ML course on youtube neural networks until end
     - [ ] [Lecture 11-20](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
-10. Finish The 100 Page Machine Learning Book from step 4
-11. Projects:
-    - [ ] MNIST classifier from scratch
-    - [ ] A language model?
-12. Transformers
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
 - [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
 - [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+
 - [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
 - [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
 - [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
-- [MNIST classifier using Pytorch (my own article)](https://lukasn.xyz/posts/neural-network-model-basics/)
 
 ### Download the datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
-- [MNIST](https://www.kaggle.com/datasets/avnishnish/mnist-original)
+- [MNIST](https://yann.lecun.com/exdb/mnist/)
 - [Height weight](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 - [Water quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
-- [Iris dataset](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
 - [Diabetes](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
-- [Other data](https://github.com/Avik-Jain/100-Days-Of-ML-Code/tree/master/datasets)
