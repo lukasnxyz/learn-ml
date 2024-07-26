@@ -2,16 +2,16 @@ import math
 import numpy as np
 
 # XOR
-X = np.array([
-    [0, 0],
-    [1, 0],
-    [0, 1],
-    [1, 1]
-    ])
-Y = np.array([0, 1, 1, 0])
+data = np.array([
+    [0, 0, 1, 1],
+    [0, 1, 0, 1],
+    [0, 1, 1, 0]
+])
+X = data[:-1, :]
+Y = data[-1, :]
 
-def sigmoid(x: float):
-    return 1/(1+math.exp(-x))
+def sigmoid(x: np.ndarray):
+    return 1/(1+np.exp(-x))
 
 def loss(yh: float, y: float) -> float:
     return -(y*math.log(yh)+(1-y)*math.log(1-yh))
@@ -23,16 +23,13 @@ def cost(yh: np.ndarray, y: np.ndarray):
     return c/m
 
 def forward(x: np.ndarray, w: np.ndarray, b: float):
-    out = []
-    for i in range(len(x)):
-        out.append(sigmoid(np.dot(x[i], w) + b)) # yh
-    return out
+    return sigmoid(np.dot(w, x) + b)
 
 def backward(x: np.ndarray, yh: np.ndarray, y: np.ndarray, w_dim: int):
     m = len(x)
     dz = yh - y
-    dw = np.dot(x.T, dz.T) / m
-    db = np.sum(dz) / m
+    dw = 1/m*np.dot(x, dz.T)
+    db = 1/m*np.sum(dz)
     return dw, db
 
 def train(iters: int, lr: float, x: np.ndarray, y: np.ndarray, w: np.ndarray, b: float):
@@ -45,13 +42,13 @@ def train(iters: int, lr: float, x: np.ndarray, y: np.ndarray, w: np.ndarray, b:
         # backward
         dw, db = backward(x, yh, y, len(w))
         
-        ## optimize
+        # optimize
         w += -lr*dw
         b += -lr*db
     return c
 
 if __name__ == '__main__':
-    w = np.array([0.1, 0.1])
-    b = 0.3
+    w = np.zeros([X.shape[0]])
+    b = 0.0
 
-    loss = train(10, 0.1, X, Y, w, b)
+    loss = train(2, 0.01, X, Y, w, b)

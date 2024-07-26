@@ -1,7 +1,7 @@
 import numpy as np
 import csv
-from tqdm import tqdm
-from sklearn.model_selection import train_test_split
+#from tqdm import tqdm
+#from sklearn.model_selection import train_test_split
 
 def sigmoid(x):
     return 1/(1 + np.exp(-x))
@@ -21,7 +21,7 @@ class LogisiticRegression:
         self.weights = np.zeros(n_features)
         self.bias = 0
 
-        for _ in tqdm(range(self.epochs), desc="Training"):
+        for i in range(self.epochs):
             linear_pred = np.dot(features, self.weights) + self.bias
             predictions = sigmoid(linear_pred)
 
@@ -30,6 +30,7 @@ class LogisiticRegression:
 
             self.weights = self.weights - dw * self.rate
             self.bias = self.bias - db * self.rate
+            print(f'{i}: {predictions}')
 
     def predict(self, features):
         linear_pred = np.dot(features, self.weights) + self.bias
@@ -39,25 +40,34 @@ class LogisiticRegression:
 
 def main():
     #data = pd.read_csv("../data/height-weight.csv")
-    with open("../data/height-weight.csv", "r") as file:
-        reader = csv.reader(file)
-        data_csv = list(reader)
+    #with open("../data/height-weight.csv", "r") as file:
+    #    reader = csv.reader(file)
+    #    data_csv = list(reader)
 
-    data = np.array(data_csv)
-    data = np.delete(data, (0), axis=0)
-    data = data.astype(float)
+    #data = np.array(data_csv)
+    #data = np.delete(data, (0), axis=0)
+    #data = data.astype(float)
 
-    features = data[:, 1:]
-    ys = data[:, 0]
+    data = np.array([
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 0, 1],
+        [1, 1, 0]
+    ])
 
-    features_train, features_test, ys_train, ys_test = train_test_split(features, ys, test_size=0.2, random_state=1234)
+    features = data[:, :-1]
+    ys = data[:, -1]
+    print(features)
+    print(ys)
 
-    clf = LogisiticRegression()
-    clf.fit(features_train, ys_train)
+    #features_train, features_test, ys_train, ys_test = train_test_split(features, ys, test_size=0.2, random_state=1234)
 
-    ys_pred = clf.predict(features_test)
-    a = accuracy(ys_test, ys_pred) * 100
-    print("Accuracy: " + "{:.2f}%".format(a))
+    clf = LogisiticRegression(epochs=50)
+    clf.fit(features, ys)
+
+    #ys_pred = clf.predict(features_test)
+    #a = accuracy(ys_test, ys_pred) * 100
+    #print("Accuracy: " + "{:.2f}%".format(a))
 
     # need to use logistic regression for true or false problems
     # this is more of a true or false algo because of the sigmoid function

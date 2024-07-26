@@ -40,17 +40,15 @@ how the previous topics work from implementing them.
     - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
         - [A Little About Perceptrons and Activation Functions](https://medium.com/mlearning-ai/a-little-about-perceptrons-and-activation-functions-aed19d672656)
-3. Stanford CS229 ML course on youtube until neural networks
-    - [X] [Lecture 1 - 10](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=1)
-4. [X] Learn basics of pytorch (or any other popular ML library)
-5. Projects:
+3. [X] Learn basics of pytorch (or any other popular ML library)
+4. Projects:
     - [X] Random algo implement from scratch with math notes
     - [X] MNIST classifier (using pytorch)
-6. Multilayer Perceptron/Feed Forward neural network
+5. Multilayer Perceptron/Feed Forward neural network
     - [X] [Here's](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3) a good intro to NN's playlist. Warning: it's not a complete guide!
     - [Training a classifier with softmax cross entropy loss](https://douglasorr.github.io/2021-10-training-objectives/1-xent/article.html#mjx-eqn-eqn%3Aloss)
     - [X] [NN from scratch Karpathy (basically implement working MLP](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
-7. Karpathy Zero-To-Hero Series
+6. Karpathy Zero-To-Hero Series
     - [X] [Micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
     - [X] [Makemore: pt1](https://www.youtube.com/watch?v=PaCmpygFfXo&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=2)
     - [X] [Makemore: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=3)
@@ -58,8 +56,12 @@ how the previous topics work from implementing them.
     - [X] [Makemore: Backprop](https://www.youtube.com/watch?v=q8SA3rM6ckI&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=5)
     - [X] [Makemore: WaveNet](https://www.youtube.com/watch?v=t3YJ5hKiMQ0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=6)
     - [X] [GPT From Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=7)
-8. Stanford CS229 ML course on youtube neural networks until end
-    - [ ] [Lecture 11-20](https://www.youtube.com/watch?v=MfIjxPh6Pys&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU&index=11)
+7. Andrew Ng - The Deep Learning Specialization
+    - [ ] Neural Network and Deep Learning
+    - [ ] Improving Deep Neural Networks
+    - [ ] Structuring Machine Learning Projects
+    - [ ] Convolutional Neural Networks
+    - [ ] Sequence Models
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
