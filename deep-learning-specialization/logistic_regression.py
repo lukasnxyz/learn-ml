@@ -1,11 +1,11 @@
 import math
 import numpy as np
 
-# XOR
+# AND
 data = np.array([
     [0, 0, 1, 1],
     [0, 1, 0, 1],
-    [0, 1, 1, 0]
+    [0, 0, 0, 1]
 ])
 X = data[:-1, :]
 Y = data[-1, :]
@@ -23,7 +23,7 @@ def cost(yh: np.ndarray, y: np.ndarray):
     return c/m
 
 def forward(x: np.ndarray, w: np.ndarray, b: float):
-    return sigmoid(np.dot(w, x) + b)
+    return sigmoid(np.dot(w.T, x) + b)
 
 def backward(x: np.ndarray, yh: np.ndarray, y: np.ndarray, w_dim: int):
     m = len(x)
@@ -32,23 +32,24 @@ def backward(x: np.ndarray, yh: np.ndarray, y: np.ndarray, w_dim: int):
     db = 1/m*np.sum(dz)
     return dw, db
 
-def train(iters: int, lr: float, x: np.ndarray, y: np.ndarray, w: np.ndarray, b: float):
+def train(iters: int, ieval: int, lr: float, x: np.ndarray, y: np.ndarray, w: np.ndarray, b: float):
     for i in range(iters):
         # forward
         yh = forward(x, w, b)
         c = cost(yh, y)
-        print(f'c: {c:.4f}, yh: {yh}')
+        if i % ieval == 0: print(f'c: {c:.4f}, yh: {yh}')
 
         # backward
         dw, db = backward(x, yh, y, len(w))
         
-        # optimize
+        # step
         w += -lr*dw
         b += -lr*db
-    return c
+    return c, yh
 
 if __name__ == '__main__':
-    w = np.zeros([X.shape[0]])
+    w = np.zeros(X.shape[0])
     b = 0.0
 
-    loss = train(2, 0.01, X, Y, w, b)
+    cost, yh = train(2000, 250, 0.1, X, Y, w, b)
+    print(np.round(yh))
