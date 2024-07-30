@@ -33,7 +33,7 @@ how the previous topics work from implementing them.
         - [Video tutorial](https://www.youtube.com/watch?v=NxEHSAfFlK8&t=5s)
         - [Video explanation](https://www.youtube.com/watch?v=LDRbO9a6XPU)
     - [ ] Random forest
-    - [ ] Principal component analysis (PCA)
+    - [X] Principal component analysis (PCA)
         - [Video tutorial](https://www.youtube.com/watch?v=Rjr62b_h7S4)
     - [X] K means clustering
         - [Video tutorial](https://www.youtube.com/watch?v=6UF5Ysk_2gk)
