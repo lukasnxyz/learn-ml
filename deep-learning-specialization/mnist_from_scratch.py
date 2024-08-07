@@ -36,7 +36,7 @@ def softmax(x: np.ndarray):
 def relu(x: np.ndarray): return np.maximum(0, x)
 def d_relu(x: np.ndarray): return (x>0)*1
 
-def sigmoid(x: np.ndarray): return 1/(1+np.exp(-x))
+def sigmoid(x: np.ndarray, beta=1e-15): return 1/(1+np.exp(-(x+beta)))
 def d_sigmoid(x: np.ndarray): return sigmoid(x)*(1-sigmoid(x))
 
 def closs(yh: np.ndarray, y: np.ndarray, beta=1e-15): # cross-entropy
@@ -70,13 +70,13 @@ class Model:
 
     def backward(self, x: np.ndarray, yh: np.ndarray, y: np.ndarray):
         m = x.shape[1] # (784, num of examples)
-        print('W1', self.W1)
-        print('x', x)
+        #print('W1', self.W1)
+        #print('x', x)
         z1 = np.dot(self.W1, x) + self.b1
         ai = self.a1(z1)
 
         dz2 = yh - onehot(y) 
-        print('ai', ai)
+        #print('ai', ai)
         self.dW2 = 1/m*np.dot(dz2, ai.T)
         self.db2 = 1/m*np.sum(dz2, axis=1, keepdims=True)
 
@@ -92,8 +92,8 @@ class Model:
 
 m = Model(784, 128, 10)
 batch_size = 32
-epochs = 2
-iepoch = 1
+epochs = 650
+iepoch = 100
 lossi = []
 
 for i in (t := tqdm(range(epochs))):
@@ -104,9 +104,9 @@ for i in (t := tqdm(range(epochs))):
     loss = cost(yh, Yb)
 
     m.backward(Xb, yh, Yb)
-    m.step(0.001)
+    m.step(0.0001)
 
-    print(m.W2)
+    #print(m.W2)
 
     t.set_description(f'loss: {loss:.4f}')
     lossi.append(loss)
@@ -123,6 +123,6 @@ for i in (t := tqdm(range(epochs))):
 #devprob = accuracy(yhs, Ydev.T)*100
 #print(f'acc: {devprob:.2f}%')
 
-#import matplotlib.pyplot as plt
-#plt.plot(lossi)
-#plt.show()
+import matplotlib.pyplot as plt
+plt.plot(lossi)
+plt.show()
