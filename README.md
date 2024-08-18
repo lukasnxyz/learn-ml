@@ -57,11 +57,11 @@ how the previous topics work from implementing them.
     - [X] [Makemore: WaveNet](https://www.youtube.com/watch?v=t3YJ5hKiMQ0&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=6)
     - [X] [GPT From Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=7)
 7. Andrew Ng - The Deep Learning Specialization
-    - [ ] Neural Network and Deep Learning
-    - [ ] Improving Deep Neural Networks
-    - [ ] Structuring Machine Learning Projects
-    - [ ] Convolutional Neural Networks
-    - [ ] Sequence Models
+    - [X] Neural Network and Deep Learning
+    - [X] Improving Deep Neural Networks
+    - [X] Structuring Machine Learning Projects
+    - [X] Convolutional Neural Networks
+    - [X] Sequence Models
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
