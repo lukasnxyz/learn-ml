@@ -43,7 +43,8 @@ def train(iters: int, ieval: int, lr: float, x: np.ndarray, y: np.ndarray, w: np
         dw, db = backward(x, yh, y, len(w))
         
         # step
-        w += -lr*dw
+        #w += -lr*dw
+        w = w + -lr * dw
         b += -lr*db
     return c, yh
 

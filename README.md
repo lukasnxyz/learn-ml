@@ -62,6 +62,7 @@ how the previous topics work from implementing them.
     - [X] Structuring Machine Learning Projects
     - [X] Convolutional Neural Networks
     - [X] Sequence Models
+8. [ ] Stanford CS230 Deep Learning
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
