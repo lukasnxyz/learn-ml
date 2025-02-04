@@ -16,6 +16,8 @@ Know what [MNIST](https://en.wikipedia.org/wiki/MNIST_database) is.
 You can jump around within each step. I would advise to just skim the Stanford lectures if you understand
 how the previous topics work from implementing them.
 1. DSA
+    - [X] Most used data structures
+    - [X] Most used algorithms
 2. Fundamental ML algorithms from scratch
     - [X] Linear regression
         - [Video tutorial](https://www.youtube.com/watch?v=VmbA0pi2cRQ)
@@ -40,7 +42,8 @@ how the previous topics work from implementing them.
     - [X] Perceptron
         - [Video tutorial](https://www.youtube.com/watch?v=aOEoxyA4uXU)
         - [A Little About Perceptrons and Activation Functions](https://medium.com/mlearning-ai/a-little-about-perceptrons-and-activation-functions-aed19d672656)
-3. [X] Learn basics of pytorch (or any other popular ML library)
+3. Learn basics of pytorch (or any other popular ML library)
+    - [X] [learnpytorch.io](https://www.learnpytorch.io/)
 4. Projects:
     - [X] Random algo implement from scratch with math notes
     - [X] MNIST classifier (using pytorch)
@@ -63,6 +66,8 @@ how the previous topics work from implementing them.
     - [X] Convolutional Neural Networks
     - [X] Sequence Models
 8. [ ] Stanford CS230 Deep Learning
+9. CUDA/GPU Programming and Parallel Computing
+    - [ ] [Time-lapse guy from X](https://www.youtube.com/watch?v=86FAWCzIe_4&t=2263s)
 
 #### Other notes and useful links
 - [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)

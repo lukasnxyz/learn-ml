@@ -1,11 +1,11 @@
 import math
 import numpy as np
 
-# AND
+# XOR
 data = np.array([
     [0, 0, 1, 1],
     [0, 1, 0, 1],
-    [0, 0, 0, 1]
+    [0, 1, 1, 0]
 ])
 X = data[:-1, :]
 Y = data[-1, :]
@@ -18,7 +18,7 @@ def loss(yh: float, y: float) -> float:
 
 def cost(yh: np.ndarray, y: np.ndarray):
     m, c = len(y), 0
-    for i in range(m): 
+    for i in range(m):
         c += loss(yh[i], y[i])
     return c/m
 
@@ -41,7 +41,7 @@ def train(iters: int, ieval: int, lr: float, x: np.ndarray, y: np.ndarray, w: np
 
         # backward
         dw, db = backward(x, yh, y, len(w))
-        
+
         # step
         #w += -lr*dw
         w = w + -lr * dw
