@@ -10,7 +10,6 @@ Self study is very difficult so having a set plan like one would have in a schoo
 machine learning for software developers. It goes more for the top down approach of learning instead of
 bottom up, but an interesting read nonetheless.
 [An interesting article on how to learn on your own](https://metacademy.org/roadmaps/rgrosse/learn_on_your_own)
-Know what [MNIST](https://en.wikipedia.org/wiki/MNIST_database) is.
 
 #### Bottom up method
 You can jump around within each step. I would advise to just skim the Stanford lectures if you understand
@@ -65,22 +64,32 @@ how the previous topics work from implementing them.
     - [X] Structuring Machine Learning Projects
     - [X] Convolutional Neural Networks
     - [X] Sequence Models
-8. [ ] Stanford CS230 Deep Learning
-9. CUDA/GPU Programming and Parallel Computing
+8. CUDA/GPU Programming and Parallel Computing
     - [ ] [Time-lapse guy from X](https://www.youtube.com/watch?v=86FAWCzIe_4&t=2263s)
+    - [ ] [Github repo for it](https://github.com/Infatoshi/cuda-course)
+        - [ ] 01 Deep Learning Ecosystem
+        - [ ] 02 Setup
+        - [ ] 03 C and C++ Review
+        - [ ] 04 Gentle Intro to GPUS
+        - [ ] 05 Writing your first kernels
+        - [ ] 06 CUDA APIs
+        - [ ] 07 Faster Matmul
+        - [ ] 08 Triton
+        - [ ] 09 Pytorch extensions
+        - [ ] 10 Final Project
+        - [ ] 11 Extras
 
-#### Other notes and useful links
-- [Python Machine Learning Mini-Course](https://machinelearningmastery.com/python-machine-learning-mini-course/)
-- [Basics of numpy](https://numpy.org/devdocs/user/absolute_beginners.html)
-- [Folder structure for an ML project](https://dev.to/luxacademy/generic-folder-structure-for-your-machine-learning-projects-4coe)
+#### Projects to learn by Doing
+- [ ] Vector embedding model first in numpy from scratch then in pytorch
+- [ ] Setup and train GPT-2 (karpathy style)
+- [ ] Fine tune a llama model properly
 
-- [MNIST from scratch George Hotz](https://www.youtube.com/watch?v=JRlyw6LO5qo&list=WL&index=1)
-- [Building a Language Model](https://medium.com/analytics-vidhya/a-comprehensive-guide-to-build-your-own-language-model-in-python-5141b3917d6d)
-- [Neural Network from Scratch](https://medium.com/@waleedmousa975/building-a-neural-network-from-scratch-using-numpy-and-math-libraries-a-step-by-step-tutorial-in-608090c20466)
+Need practice with running experiments, watching loss curves, tuning hyper-parameters and such.
+Can get this by actually doing.
 
-### Download the datasets I've used in this repo
+#### Datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
-- [MNIST](https://yann.lecun.com/exdb/mnist/)
+- [MNIST](https://yann.lecun.com/exdb/mnist/), [MNIST Wikipedia](https://en.wikipedia.org/wiki/MNIST_database)
 - [Height weight](https://www.kaggle.com/code/martandsay/height-weight-regression-classification/input)
 - [Water quality](https://www.kaggle.com/datasets/adityakadiwal/water-potability)
 - [Diabetes](https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv)
