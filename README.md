@@ -67,7 +67,7 @@ how the previous topics work from implementing them.
 8. CUDA/GPU Programming and Parallel Computing
     - [ ] [Time-lapse guy from X](https://www.youtube.com/watch?v=86FAWCzIe_4&t=2263s)
     - [ ] [Github repo for it](https://github.com/Infatoshi/cuda-course)
-        - [ ] 01 Deep Learning Ecosystem
+        - [X] 01 Deep Learning Ecosystem
         - [ ] 02 Setup
         - [ ] 03 C and C++ Review
         - [ ] 04 Gentle Intro to GPUS
@@ -78,14 +78,9 @@ how the previous topics work from implementing them.
         - [ ] 09 Pytorch extensions
         - [ ] 10 Final Project
         - [ ] 11 Extras
-
-#### Projects to learn by Doing
-- [ ] Vector embedding model first in numpy from scratch then in pytorch
-- [ ] Setup and train GPT-2 (karpathy style)
-- [ ] Fine tune a llama model properly
-
-Need practice with running experiments, watching loss curves, tuning hyper-parameters and such.
-Can get this by actually doing.
+9. Compilers, LLVM, and such (low level things for deep learning)
+    - [ ] [Tutorials on Tinygrad](https://mesozoic-egg.github.io/tinygrad-notes/)
+    - [ ] [Language Front-end with LLVM](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/index.html)
 
 #### Datasets I've used in this repo
 - [500 Person Gender-Height-Weight-BMI](https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymassindex)
