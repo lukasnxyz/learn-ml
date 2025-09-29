@@ -5,3 +5,4 @@ notebooks/.ipynb_checkpoints/
 .ipynb_checkpoints/
 venv
 karpathy_zero_to_hero/.ipynb_checkpoints/
+.DS_Store

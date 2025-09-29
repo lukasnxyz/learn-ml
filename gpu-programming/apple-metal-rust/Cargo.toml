@@ -1,0 +1,10 @@
+[package]
+name = "apple-metal-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cocoa = "0.26.1"
+metal = "0.32.0"
+objc2 = "0.6.2"
+objc2-foundation = "0.3.1"
