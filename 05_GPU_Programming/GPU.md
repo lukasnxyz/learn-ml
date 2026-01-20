@@ -3,11 +3,16 @@
 - Basically, GPU cores execute the exact same instruction over lots of different data
 - You can do N (number of cores) same ops per clock cycle
 
+- GPUs are basically lots of threads (cuda cores) that are grouped into blocks (cores)
+- You have SIMD (Single Instruction Multiple Data) on CPUs and SIMT (Single Instruction Multiple
+    Thread) on GPUs
+
 ### CPU cores
 - Larger for more complex logical tasks
 - Include out of order execution, branch prediction, speculation, and register renaming
 - Big caches because the time it takes to go from ram to core is much larger (compared to the
     time to go from VRAM to a GPU core)
+- GPUs: 1024 bit wide SIMD machines
 
 ### GPU cores
 - No heavy branch prediction or out of order execution
