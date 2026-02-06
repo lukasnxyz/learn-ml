@@ -10,14 +10,16 @@ from collections import deque
 device = "cpu"
 
 class DQN(nn.Module):
-    def __init__(self, state_dim: int, hidden_dim: int, action_dim: int):
+    def __init__(self, state_dim: int, action_dim: int):
         super(DQN, self).__init__()
         self.fc = nn.Sequential(
-            nn.Linear(state_dim, hidden_dim),
+            nn.Linear(state_dim, 240),
             nn.ReLU(),
-            nn.Linear(hidden_dim, hidden_dim),
+            nn.Linear(240, 150),
             nn.ReLU(),
-            nn.Linear(hidden_dim, action_dim) # Outputs Q-values for Left and Right
+            nn.Linear(150, 80),
+            nn.ReLU(),
+            nn.Linear(80, action_dim),
         )
 
     def forward(self, x):
@@ -43,14 +45,18 @@ def train(env: gym.Env,
           epsilon: float,
           optimizer: torch.optim.Optimizer,
 ):
+    global_step = 0
+    recent_rewards = deque(maxlen=EARLY_STOP_WINDOW)
     for episode in (t := trange(EPISODES)):
         state, _ = env.reset()
         total_reward = 0
         done = False
 
-        epsilon = max(EPSILON_END, EPSILON_START - (episode / EPSILON_DECAY_WINDOW))
-
         while not done:
+            epsilon = max(
+                EPSILON_END,
+                EPSILON_START - (global_step / EPSILON_DECAY_STEPS)
+            )
             # action selection (Epsilon-Greedy)
             if random.random() < epsilon:
                 action = env.action_space.sample()
@@ -66,9 +72,10 @@ def train(env: gym.Env,
             memory.push(state, action, reward, next_state, done)
             state = next_state
             total_reward += reward
+            global_step += 1
 
             # optimize the Model
-            if len(memory) > BATCH_SIZE:
+            if len(memory) >= REPLAY_WARMUP:
                 batch = memory.sample(BATCH_SIZE)
                 # unzip the batch
                 s_batch, a_batch, r_batch, ns_batch, d_batch = zip(*batch)
@@ -92,32 +99,44 @@ def train(env: gym.Env,
                 loss.backward()
                 optimizer.step()
 
-        # update Target Network
-        if episode % TARGET_UPDATE_EPISODES == 0:
-            target_net.load_state_dict(policy_net.state_dict())
+            # update Target Network
+            if global_step % TARGET_UPDATE_STEPS == 0:
+                target_net.load_state_dict(policy_net.state_dict())
 
-        t.set_description(f"score: {total_reward}, epsilon: {epsilon:.2f}")
+        t.set_description(f"score: {total_reward}, epsilon: {epsilon:.2f}, global_step: {global_step}")
+        recent_rewards.append(total_reward)
+        if len(recent_rewards) == EARLY_STOP_WINDOW:
+            avg_reward = sum(recent_rewards) / EARLY_STOP_WINDOW
+            if avg_reward >= EARLY_STOP_THRESHOLD:
+                print(
+                    f"Early stopping: avg reward {avg_reward:.1f} over "
+                    f"last {EARLY_STOP_WINDOW} episodes at episode {episode + 1}"
+                )
+                break
 
-EPISODES = 500
-BATCH_SIZE = 128
-LR = 0.0005
+EPISODES = 3000
+BATCH_SIZE = 64
+LR = 1e-3
 GAMMA = 0.99
-TARGET_UPDATE_EPISODES = 6
+TARGET_UPDATE_STEPS = 10_000
+REPLAY_WARMUP = 6_000
 
-EPSILON_START = 1.0
+EPSILON_START = 0.9
 EPSILON_END = 0.05
-EPSILON_DECAY_WINDOW = 350
+EPSILON_DECAY_STEPS = 40_000
+
+EARLY_STOP_WINDOW = 100
+EARLY_STOP_THRESHOLD = 475.0
 
 if __name__ == "__main__":
     env = gym.make("CartPole-v1")
     state_dim = env.observation_space.shape[0]
     action_dim = env.action_space.n
-    hidden_dim = 256
     memory = ReplayMemory(50_000)
     epsilon = EPSILON_START
 
-    policy_net = DQN(state_dim, hidden_dim, action_dim).to(device) # the one we train
-    target_net = DQN(state_dim, hidden_dim, action_dim).to(device) # the one used for targets
+    policy_net = DQN(state_dim, action_dim).to(device) # the one we train
+    target_net = DQN(state_dim, action_dim).to(device) # the one used for targets
     target_net.load_state_dict(policy_net.state_dict())
     optimizer = optim.Adam(policy_net.parameters(), lr=LR)
 
