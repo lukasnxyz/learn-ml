@@ -87,11 +87,11 @@ class DQNAgent:
             self.epsilon *= self.epsilon_decay
 
 def train_dqn(env: gym.Env, agent: DQNAgent, episodes: int, ep_update: int):
-    rewards_per_ep = []
+    rewards_per_ep, steps = [], 0
     for episode in range(episodes):
         state, _ = env.reset()
         done = False
-        total_reward, steps = 0.0, 0
+        total_reward = 0.0
         while not done:
             steps += 1
             action = agent.act(state)
@@ -114,7 +114,7 @@ def train_dqn(env: gym.Env, agent: DQNAgent, episodes: int, ep_update: int):
         if (episode) % ep_update == 0: agent.update_target_model()
         rewards_per_ep.append(total_reward)
         if (episode) % ep_update == 0:
-            print(f"episode: {episode}, reward: {total_reward:.2f}, steps: {steps}, eps: {agent.epsilon:.2f}")
+            print(f"episode: {episode+1}, reward: {total_reward:.2f}, steps: {steps}, eps: {agent.epsilon:.2f}")
 
     return rewards_per_ep
 
@@ -133,7 +133,7 @@ if __name__ == "__main__":
     plt.ylabel("Reward")
     plt.title("Deep Q-Learning on CartPole with Position Constraints")
     plt.grid()
-    plt.savefig("dqn_cartpole_training_curve.png")
+    #plt.savefig("dqn_cartpole_training_curve.png")
     plt.show()
 
     test_episodes, episode_rewards = 100, []
