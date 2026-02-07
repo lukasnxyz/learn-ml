@@ -92,6 +92,7 @@ def train_dqn(env: gym.Env, agent: DQNAgent, episodes: int, ep_update: int):
         state, _ = env.reset()
         done = False
         total_reward = 0.0
+
         while not done:
             steps += 1
             action = agent.act(state)
